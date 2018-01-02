@@ -17,10 +17,8 @@ Several optimizations have been introduced in this improved version in order to 
 Here, we include several implementations for different platforms, in order to ease the application of our proposal. These are: 
 
 1. **Sequential version**: we provide a basic implementation in C++ for CPU processing. This is designed to be executed in a single machine. This version includes all aforementioned optimizations.
-2. **CUDA implementation**: we also provide a GPU implementation (using CUDA) with the aim of speeding up the previous version through GPU's thread-parallelism. 
-3. **Apache Spark**: a Apache Spark's implementation of the algorithm is also included for large-scale problems, which require a distributed processing in order to obtain efficient solutions.
-4. **OpenMP**: an OpenMp's implementation of the algorithm.
-5. **MPI**: an Message Passing Interface implementation of the algorithm.
+2. **OpenMP**: an OpenMp's implementation of the algorithm.
+3. **MPI**: an Message Passing Interface implementation of the algorithm.
 
 Please, for further information refer to our wiki: https://github.com/sramirez/fast-mRMR/wiki
 
@@ -29,8 +27,6 @@ Please, for further information refer to our wiki: https://github.com/sramirez/f
 The code is organized as follows:
 
 * _cpu_: C++ code for CPU .
-* _gpu_: CUDA code for GPU implementation .
-* _spark_: Scala code for distributed processing in Apache Spark platform .
 * _utils_: this folder contains a data reader program that transforms data in CSV format to the format required by fast-mRMR algorithm (in binary and columnar-wise format). It also includes a data generator method in case we want to generate synthetic data specifying the structure of this data.
 * _examples_: a folder with examples for all versions implemented.   
 
