@@ -1,0 +1,7 @@
+gcc/5.3.0 loaded
+boost/1.61.0 loaded
+openmpi/1.10.2 loaded
+make: ../../ParallelMPI/fast-mrmr: No such file or directory
+make: *** No rule to make target '../../ParallelMPI/fast-mrmr'.  Stop.
+make: ../../ParallelMPI/fast-mrmr: No such file or directory
+make: *** No rule to make target '../../ParallelMPI/fast-mrmr'.  Stop.

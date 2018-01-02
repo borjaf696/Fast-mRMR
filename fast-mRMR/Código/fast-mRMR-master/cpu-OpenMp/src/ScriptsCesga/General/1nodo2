@@ -1,0 +1,33 @@
+#!/bin/bash
+#SBATCH -N 1
+#SBATCH -n 24
+#SBATCH -t 10:00:00
+#SBATCH -p thinnodes
+module load gcc boost openmpi
+cd $1
+make clean -f $9
+make -f $9
+cd $2
+N=1
+b=24
+export OMP_NUM_THREADS=$b
+mpirun -np 1 --report-bindings --bind-to none $8 -a 50 -f $3 >> $4
+mpirun -np 1 --report-bindings --bind-to none $8 -a 100 -f $3 >> $4
+mpirun -np 1 --report-bindings --bind-to none $8 -a 200 -f $3 >> $4
+mpirun -np 1 --report-bindings --bind-to none $8 -a 50 -f $5 >> $6
+mpirun -np 1 --report-bindings --bind-to none $8 -a 100 -f $5 >> $6
+mpirun -np 1 --report-bindings --bind-to none $8 -a 200 -f $5 >> $6
+limit=( 2 4 6 12 24)
+for i in "${limit[@]}"
+do
+	N=$((b/i))
+	echo $N
+	export OMP_NUM_THREADS=$N
+	mpirun -np $i --report-bindings --map-by socket $8 -a 50 -f $3 >> $4
+	mpirun -np $i --report-bindings --map-by socket $8 -a 100 -f $3 >> $4
+	mpirun -np $i --report-bindings --map-by socket $8 -a 200 -f $3 >> $4
+
+	mpirun -np $i --report-bindings --map-by socket $8 -a 50 -f $5 >> $6
+	mpirun -np $i --report-bindings --map-by socket $8 -a 100 -f $5 >> $6
+	mpirun -np $i --report-bindings --map-by socket $8 -a 200 -f $5 >> $6
+done

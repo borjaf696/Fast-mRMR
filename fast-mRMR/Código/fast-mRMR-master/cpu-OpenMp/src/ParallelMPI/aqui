@@ -1,0 +1,10 @@
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./../../ParallelMPI/fast-mrmr
+Node: c7045
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+24 total processes failed to start

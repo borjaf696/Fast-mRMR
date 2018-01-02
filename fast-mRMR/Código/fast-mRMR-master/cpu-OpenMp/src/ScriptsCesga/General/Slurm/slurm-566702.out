@@ -1,0 +1,88 @@
+gcc/5.3.0 loaded
+boost/1.61.0 loaded
+openmpi/1.10.2 loaded
+rm *.o
+rm ../../plibOp6/*.o
+rm fast-mrmr
+clear
+[3J[H[2Jmpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp -o mainOpenMpMPI-V1-Block-Funcional0.3.3.o
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp: En la función ‘int main(int, char**)’:
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:152:15: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     if ( diff > mpi_rank) {
+               ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:163:32: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     int sumaInteres = (proceso > diff) ? diff:proceso;
+                                ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:164:53: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     while (proceso*sizePerProcessGlobal+sumaInteres > claseStudy) {
+                                                     ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:166:32: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         sumaInteres = (proceso > diff) ? diff:proceso;
+                                ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:175:28: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         for (uint i = 0; i < dataSizes; i++)
+                            ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:199:33: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     for (int j = dataSizes+2; j < (dataSizes+2+sizeof(double)*tamanho); j+=8) {
+                                 ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:245:27: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     if ((lastFeatureIndex > startPoint) & (lastFeatureIndex < (startPoint+sizePerProcess)))
+                           ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:252:28: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     sumaInteres = (proceso > diff) ? diff:proceso;
+                            ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:253:53: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     while (proceso*sizePerProcessGlobal+sumaInteres > claseStudy) {
+                                                     ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:255:32: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         sumaInteres = (proceso > diff) ? diff:proceso;
+                                ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:262:28: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         for (uint i = 0; i < dataSizes; i++)
+                            ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:284:33: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     for (int j = dataSizes+2; j < (dataSizes+2+sizeof(double)*tamanho); j+=8) {
+                                 ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:347:31: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         if ((lastFeatureIndex > startPoint) & (lastFeatureIndex < (startPoint+sizePerProcess)))
+                               ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:354:32: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         sumaInteres = (proceso > diff) ? diff:proceso;
+                                ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:355:57: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         while (proceso*sizePerProcessGlobal+sumaInteres > claseStudy) {
+                                                         ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:357:36: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+             sumaInteres = (proceso > diff) ? diff:proceso;
+                                    ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:364:32: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+             for (uint i = 0; i < dataSizes; i++)
+                                ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:386:37: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         for (int j = dataSizes+2; j < (dataSizes+2+sizeof(double)*tamanho); j+=8) {
+                                     ^
+mainOpenMpMPI-V1-Block-Funcional0.3.3.cpp:214:9: aviso: variable ‘iterator’ sin usar [-Wunused-variable]
+     int iterator = 0;
+         ^
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp6/Histogram.cpp -o ../../plibOp6/Histogram.o
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp6/JointProb.cpp -o ../../plibOp6/JointProb.o
+../../plibOp6/JointProb.cpp: En el constructor ‘JointProb::JointProb(RawData&, t_feature, uint)’:
+../../plibOp6/JointProb.cpp:42:20: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+  for (int i = 0; i < datasize;i++)
+                    ^
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp6/MutualInfo.cpp -o ../../plibOp6/MutualInfo.o
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp6/ProbTable.cpp -o ../../plibOp6/ProbTable.o
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp6/RawData.cpp -o ../../plibOp6/RawData.o
+../../plibOp6/RawData.cpp: En la función miembro ‘void RawData::calculateDSandFS()’:
+../../plibOp6/RawData.cpp:81:12: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+  if ( diff > mpiNum) {
+            ^
+../../plibOp6/RawData.cpp: En la función miembro ‘void RawData::loadData()’:
+../../plibOp6/RawData.cpp:100:9: aviso: variable ‘buffer’ sin usar [-Wunused-variable]
+  t_data buffer[1];
+         ^
+../../plibOp6/RawData.cpp: En la función miembro ‘t_data* RawData::getFeatureStudio(t_feature)’:
+../../plibOp6/RawData.cpp:202:1: aviso: no hay una declaración de devolución en la función que no devuelve void [-Wreturn-type]
+ }
+ ^
+mpicxx mainOpenMpMPI-V1-Block-Funcional0.3.3.o ../../plibOp6/Histogram.o ../../plibOp6/JointProb.o ../../plibOp6/MutualInfo.o ../../plibOp6/ProbTable.o ../../plibOp6/RawData.o  -lboost_thread -L/usr/lib64/ -lboost_thread -fopenmp -o fast-mrmr

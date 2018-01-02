@@ -1,0 +1,87 @@
+gcc/5.3.0 unloaded
+boost/1.61.0 unloaded
+openmpi/1.10.2 unloaded
+gcc/5.3.0 loaded
+boost/1.61.0 loaded
+openmpi/1.10.2 loaded
+boost/1.61.0 unloaded
+boost/1.61.0 loaded
+openmpi/1.10.2 unloaded
+openmpi/1.10.2 loaded
+rm *.o
+rm ../../plibOp4/*.o
+rm fast-mrmr
+clear
+[3J[H[2Jmpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp -o mainOpenMpMPI-V1-Block-Funcional0.3.1.o
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp: En la función ‘int main(int, char**)’:
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:150:15: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     if ( diff > mpi_rank) {
+               ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:161:29: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+  int sumaInteres = (proceso > diff) ? diff:proceso;
+                             ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:162:57: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         while (proceso*sizePerProcessGlobal+sumaInteres > claseStudy) {
+                                                         ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:164:36: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+             sumaInteres = (proceso > diff) ? diff:proceso;
+                                    ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:173:28: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         for (uint i = 0; i < dataSizes; i++)
+                            ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:190:33: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     for (int j = dataSizes+1; j < (dataSizes+1+sizeof(double)*vectInteres2[dataSizes]); j+=8) {
+                                 ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:235:27: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     if ((lastFeatureIndex > startPoint) & (lastFeatureIndex < (startPoint+sizePerProcess)))
+                           ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:242:28: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     sumaInteres = (proceso > diff) ? diff:proceso;
+                            ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:243:57: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         while (proceso*sizePerProcessGlobal+sumaInteres > claseStudy) {
+                                                         ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:245:36: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+             sumaInteres = (proceso > diff) ? diff:proceso;
+                                    ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:252:28: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         for (uint i = 0; i < dataSizes; i++)
+                            ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:269:33: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     for (int j = dataSizes+1; j < (dataSizes+1+sizeof(double)*vectInteres2[dataSizes]); j+=8) {
+                                 ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:330:31: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         if ((lastFeatureIndex > startPoint) & (lastFeatureIndex < (startPoint+sizePerProcess)))
+                               ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:337:32: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         sumaInteres = (proceso > diff) ? diff:proceso;
+                                ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:338:57: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         while (proceso*sizePerProcessGlobal+sumaInteres > claseStudy) {
+                                                         ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:340:36: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+             sumaInteres = (proceso > diff) ? diff:proceso;
+                                    ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:347:32: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+             for (uint i = 0; i < dataSizes; i++)
+                                ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:364:37: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         for (int j = dataSizes+1; j < (dataSizes+1+sizeof(double)*vectInteres2[dataSizes]); j+=8) {
+                                     ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:205:9: aviso: variable ‘iterator’ sin usar [-Wunused-variable]
+     int iterator = 0;
+         ^
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp4/Histogram.cpp -o ../../plibOp4/Histogram.o
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp4/JointProb.cpp -o ../../plibOp4/JointProb.o
+../../plibOp4/JointProb.cpp: En el constructor ‘JointProb::JointProb(RawData&, t_feature, uint)’:
+../../plibOp4/JointProb.cpp:42:20: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+  for (int i = 0; i < datasize;i++)
+                    ^
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp4/MutualInfo.cpp -o ../../plibOp4/MutualInfo.o
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp4/ProbTable.cpp -o ../../plibOp4/ProbTable.o
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp4/RawData.cpp -o ../../plibOp4/RawData.o
+../../plibOp4/RawData.cpp: En la función miembro ‘void RawData::calculateDSandFS()’:
+../../plibOp4/RawData.cpp:78:12: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+  if ( diff > mpiNum) {
+            ^
+mpicxx mainOpenMpMPI-V1-Block-Funcional0.3.1.o ../../plibOp4/Histogram.o ../../plibOp4/JointProb.o ../../plibOp4/MutualInfo.o ../../plibOp4/ProbTable.o ../../plibOp4/RawData.o  -lboost_thread -L/usr/lib64/ -lboost_thread -fopenmp -o fast-mrmr

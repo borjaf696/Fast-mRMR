@@ -1,0 +1,1603 @@
+gcc/5.3.0 loaded
+boost/1.61.0 loaded
+openmpi/1.10.2 loaded
+rm *.o
+rm: no se puede borrar '*.o': No existe el fichero o el directorio
+Makefile3:40: fallo en las instrucciones para el objetivo 'clean'
+make: *** [clean] Error 1
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp -o mainOpenMpMPI-V1-Block-Funcional0.3.1.o
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp: En la función ‘int main(int, char**)’:
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:150:15: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     if ( diff > mpi_rank) {
+               ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:161:17: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     if (proceso > diff)
+                 ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:162:50: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         while (proceso*sizePerProcessGlobal+diff > claseStudy)
+                                                  ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:165:53: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         while (proceso*sizePerProcessGlobal+proceso > claseStudy)
+                                                     ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:174:28: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         for (uint i = 0; i < dataSizes; i++)
+                            ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:191:33: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     for (int j = dataSizes+1; j < (dataSizes+1+sizeof(double)*vectInteres2[dataSizes]); j+=8) {
+                                 ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:236:27: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     if ((lastFeatureIndex > startPoint) & (lastFeatureIndex < (startPoint+sizePerProcess)))
+                           ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:243:17: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     if (proceso > diff)
+                 ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:244:50: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         while (proceso*sizePerProcessGlobal+diff > claseStudy)
+                                                  ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:247:53: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         while (proceso*sizePerProcessGlobal+proceso > claseStudy)
+                                                     ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:254:28: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         for (uint i = 0; i < dataSizes; i++)
+                            ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:271:33: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     for (int j = dataSizes+1; j < (dataSizes+1+sizeof(double)*vectInteres2[dataSizes]); j+=8) {
+                                 ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:332:31: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         if ((lastFeatureIndex > startPoint) & (lastFeatureIndex < (startPoint+sizePerProcess)))
+                               ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:339:21: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         if (proceso > diff)
+                     ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:340:54: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+             while (proceso*sizePerProcessGlobal+diff > claseStudy)
+                                                      ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:343:57: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+             while (proceso*sizePerProcessGlobal+proceso > claseStudy)
+                                                         ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:350:32: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+             for (uint i = 0; i < dataSizes; i++)
+                                ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:367:37: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         for (int j = dataSizes+1; j < (dataSizes+1+sizeof(double)*vectInteres2[dataSizes]); j+=8) {
+                                     ^
+mainOpenMpMPI-V1-Block-Funcional0.3.1.cpp:206:9: aviso: variable ‘iterator’ sin usar [-Wunused-variable]
+     int iterator = 0;
+         ^
+mpicxx mainOpenMpMPI-V1-Block-Funcional0.3.1.o ../../plibOp4/Histogram.o ../../plibOp4/JointProb.o ../../plibOp4/MutualInfo.o ../../plibOp4/ProbTable.o ../../plibOp4/RawData.o  -lboost_thread -L/usr/lib64/ -lboost_thread -fopenmp -o fast-mrmr
+[c7215:01357] *** Process received signal ***
+[c7215:01357] Signal: Segmentation fault (11)
+[c7215:01357] Signal code: Invalid permissions (2)
+[c7215:01357] Failing at address: 0x7f33747220e0
+[c7216:21355] *** Process received signal ***
+[c7216:21355] Signal: Segmentation fault (11)
+[c7216:21355] Signal code: Invalid permissions (2)
+[c7216:21355] Failing at address: 0x7fe74c923cd0
+[c7215:01358] *** Process received signal ***
+[c7215:01358] Signal: Segmentation fault (11)
+[c7215:01358] Signal code: Invalid permissions (2)
+[c7215:01358] Failing at address: 0x7f837da253d8
+[c7216:21361] *** Process received signal ***
+[c7216:21361] Signal: Segmentation fault (11)
+[c7216:21361] Signal code: Invalid permissions (2)
+[c7216:21361] Failing at address: 0x7f834b2248b4
+[c7218:01843] *** Process received signal ***
+[c7221:02783] *** Process received signal ***
+[c7221:02783] Signal: Segmentation fault (11)
+[c7221:02783] Signal code: Invalid permissions (2)
+[c7221:02783] Failing at address: 0x7f6f481228c8
+[c7221:02789] *** Process received signal ***
+[c7221:02789] Signal: Segmentation fault (11)
+[c7221:02789] Signal code: Invalid permissions (2)
+[c7221:02789] Failing at address: 0x7f0b6cc2407c
+[c6647:29376] *** Process received signal ***
+[c6647:29376] Signal: Segmentation fault (11)
+[c6647:29376] Signal code: Address not mapped (1)
+[c6647:29376] Failing at address: 0x168ce58
+[c6647:29378] *** Process received signal ***
+[c6647:29378] Signal: Segmentation fault (11)
+[c6647:29378] Signal code: Invalid permissions (2)
+[c6647:29378] Failing at address: 0x7f52a622209c
+[c6647:29379] *** Process received signal ***
+[c6647:29380] *** Process received signal ***
+[c6647:29380] Signal: Segmentation fault (11)
+[c6647:29380] Signal code: Invalid permissions (2)
+[c6647:29380] Failing at address: 0x7f764ed24a8c
+[c6647:29381] *** Process received signal ***
+[c6647:29381] Signal: Segmentation fault (11)
+[c6647:29381] Signal code: Invalid permissions (2)
+[c6647:29381] Failing at address: 0x7f5dfbb24b2c
+[c7202:07773] *** Process received signal ***
+[c7215:01355] *** Process received signal ***
+[c7201:06506] *** Process received signal ***
+[c7201:06506] Signal: Segmentation fault (11)
+[c7201:06506] Signal code: Address not mapped (1)
+[c7201:06506] Failing at address: 0x7fb4c0206ca8
+[c7346:16521] *** Process received signal ***
+[c7221:02788] *** Process received signal ***
+[c7220:07148] *** Process received signal ***
+[c7220:07148] Signal: Segmentation fault (11)
+[c7220:07148] Signal code: Address not mapped (1)
+[c7220:07148] Failing at address: 0x1678f08
+[c7204:07365] *** Process received signal ***
+[c7204:07365] Signal: Segmentation fault (11)
+[c7204:07365] Signal code: Invalid permissions (2)
+[c7204:07365] Failing at address: 0x7fce09b24590
+[c7336:15541] *** Process received signal ***
+[c7336:15541] Signal: Segmentation fault (11)
+[c7336:15541] Signal code: Invalid permissions (2)
+[c7336:15541] Failing at address: 0x7f09292218e0
+[c7334:03944] *** Process received signal ***
+[c7345:01027] *** Process received signal ***
+[c7345:01027] Signal: Segmentation fault (11)
+[c7345:01027] Signal code: Invalid permissions (2)
+[c7345:01027] Failing at address: 0x7fb06fb247c0
+[c7216:21360] *** Process received signal ***
+[c7218:01840] *** Process received signal ***
+[c7333:04012] *** Process received signal ***
+[c6647:29374] *** Process received signal ***
+[c6647:29382] *** Process received signal ***
+[c7216:21358] *** Process received signal ***
+[c7216:21358] Signal: Segmentation fault (11)
+[c7216:21358] Signal code: Invalid permissions (2)
+[c7216:21358] Failing at address: 0x7f0c13d21b90
+[c7218:01836] *** Process received signal ***
+[c7333:04006] *** Process received signal ***
+[c7202:07775] *** Process received signal ***
+[c7215:01350] *** Process received signal ***
+[c7201:06512] *** Process received signal ***
+[c7201:06512] Signal: Segmentation fault (11)
+[c7201:06512] Signal code: Invalid permissions (2)
+[c7201:06512] Failing at address: 0x7f01cd121b6c
+[c7346:16532] *** Process received signal ***
+[c7346:16532] Signal: Segmentation fault (11)
+[c7346:16532] Signal code: Invalid permissions (2)
+[c7346:16532] Failing at address: 0x7f7598f21100
+[c7221:02783] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7f703bdd6790]
+[c7221:02783] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7221:02783] [ 2] [c7220:07155] *** Process received signal ***
+[c7220:07155] Signal: Segmentation fault (11)
+[c7220:07155] Signal code: Invalid permissions (2)
+[c7220:07155] Failing at address: 0x7f2b24e25c68
+[c7204:07366] *** Process received signal ***
+[c7336:15544] *** Process received signal ***
+[c7334:03950] *** Process received signal ***
+[c7345:01030] *** Process received signal ***
+[c7345:01030] Signal: Segmentation fault (11)
+[c7345:01030] Signal code: Invalid permissions (2)
+[c7345:01030] Failing at address: 0x7fe8ed923350
+[c7201:06514] *** Process received signal ***
+[c7346:16528] *** Process received signal ***
+./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7221:02783] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7221:02783] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7f703c20902e]
+[c7221:02783] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7f703bdcea51]
+[c7221:02783] [ 6] [c7220:07147] *** Process received signal ***
+[c7220:07147] Signal: Segmentation fault (11)
+[c7220:07147] Signal code: Address not mapped (1)
+[c7220:07147] Failing at address: 0x1185bb4
+[c7204:07373] *** Process received signal ***
+[c7336:15540] *** Process received signal ***
+[c7336:15540] Signal: Segmentation fault (11)
+[c7336:15540] Signal code: Invalid permissions (2)
+[c7336:15540] Failing at address: 0x7ff834521d58
+[c7334:03952] *** Process received signal ***
+[c7334:03952] Signal: Segmentation fault (11)
+[c7334:03952] Signal code: Invalid permissions (2)
+[c7334:03952] Failing at address: 0x7fb974479c8c
+[c7345:01033] *** Process received signal ***
+[c7345:01033] Signal: Segmentation fault (11)
+[c7345:01033] Signal code: Invalid permissions (2)
+[c7345:01033] Failing at address: 0x7f8a9922419c
+[c7216:21356] *** Process received signal ***
+[c7218:01841] *** Process received signal ***
+[c7218:01841] Signal: Segmentation fault (11)
+[c7218:01841] Signal code: Invalid permissions (2)
+[c7218:01841] Failing at address: 0x7f88951235d0
+[c7333:04008] *** Process received signal ***
+[c7202:07775] Signal: Segmentation fault (11)
+[c7202:07775] Signal code: Invalid permissions (2)
+[c7202:07775] Failing at address: 0x7fbafec21c1c
+[c7215:01355] Signal: Segmentation fault (11)
+[c7215:01355] Signal code: Invalid permissions (2)
+[c7215:01355] Failing at address: 0x7fe313024db0
+[c7220:07149] *** Process received signal ***
+[c7220:07149] Signal: Segmentation fault (11)
+[c7220:07149] Signal code: Invalid permissions (2)
+[c7220:07149] Failing at address: 0x7f4ae572358c
+[c7204:07373] Signal: Segmentation fault (11)
+[c7204:07373] Signal code: Invalid permissions (2)
+[c7204:07373] Failing at address: 0x7f3b1802342c
+[c7336:15542] *** Process received signal ***
+[c7336:15542] Signal: Segmentation fault (11)
+[c7336:15542] Signal code: Invalid permissions (2)
+[c7336:15542] Failing at address: 0x7f6911124ab0
+[c7334:03942] *** Process received signal ***
+[c7345:01034] *** Process received signal ***
+[c7216:21351] *** Process received signal ***
+[c7218:01838] *** Process received signal ***
+[c7218:01838] Signal: Segmentation fault (11)
+[c7218:01838] Signal code: Invalid permissions (2)
+[c7218:01838] Failing at address: 0x7fae3c62193c
+[c7333:04010] *** Process received signal ***
+[c7202:07780] *** Process received signal ***
+[c7215:01350] Signal: Segmentation fault (11)
+[c7215:01350] Signal code: Invalid permissions (2)
+[c7215:01350] Failing at address: 0x7fb3f6521d9c
+[c7201:06514] Signal: Segmentation fault (11)
+[c7201:06514] Signal code: Invalid permissions (2)
+[c7201:06514] Failing at address: 0x7fa3a2623d4c
+[c7346:16529] *** Process received signal ***
+[c7221:02779] *** Process received signal ***
+[c7221:02779] Signal: Segmentation fault (11)
+[c7221:02779] Signal code: Invalid permissions (2)
+[c7221:02779] Failing at address: 0x7f9cce523cc0
+[c6647:29372] *** Process received signal ***
+[c6647:29372] Signal: Segmentation fault (11)
+[c6647:29372] Signal code: Invalid permissions (2)
+[c6647:29372] Failing at address: 0x7f0f3bf24300
+[c7216:21357] *** Process received signal ***
+[c7216:21357] Signal: Segmentation fault (11)
+[c7216:21357] Signal code: Invalid permissions (2)
+[c7216:21357] Failing at address: 0x7f999cf25980
+[c7218:01839] *** Process received signal ***
+[c7333:04010] Signal: Segmentation fault (11)
+[c7333:04010] Signal code: Invalid permissions (2)
+[c7333:04010] Failing at address: 0x7f91aa22130c
+[c7202:07776] *** Process received signal ***
+[c7202:07776] Signal: Segmentation fault (11)
+[c7202:07776] Signal code: Invalid permissions (2)
+[c7202:07776] Failing at address: 0x7f16d6d25764
+[c7215:01352] *** Process received signal ***
+[c7215:01352] Signal: Segmentation fault (11)
+[c7215:01352] Signal code: Invalid permissions (2)
+[c7215:01352] Failing at address: 0x7fa076c222a8
+[c7201:06509] *** Process received signal ***
+[c7201:06509] Signal: Segmentation fault (11)
+[c7201:06509] Signal code: Invalid permissions (2)
+[c7201:06509] Failing at address: 0x7fd38a322528
+[c7346:16528] Signal: Segmentation fault (11)
+[c7346:16528] Signal code: Invalid permissions (2)
+[c7346:16528] Failing at address: 0x7fb718472938
+/lib64/libc.so.6(clone+0x6d)[0x7f703bb1b93d]
+[c7221:02783] *** End of error message ***
+[c7220:07153] *** Process received signal ***
+[c7220:07153] Signal: Segmentation fault (11)
+[c7220:07153] Signal code: Invalid permissions (2)
+[c7220:07153] Failing at address: 0x7ff87582122c
+[c7204:07370] *** Process received signal ***
+[c7204:07370] Signal: Segmentation fault (11)
+[c7204:07370] Signal code: Address not mapped (1)
+[c7204:07370] Failing at address: 0x289c85c
+[c7336:15548] *** Process received signal ***
+[c7334:03945] *** Process received signal ***
+[c7334:03945] Signal: Segmentation fault (11)
+[c7334:03945] Signal code: Invalid permissions (2)
+[c7334:03945] Failing at address: 0x7efd04a21c5c
+[c7345:01025] *** Process received signal ***
+[c7345:01025] Signal: Segmentation fault (11)
+[c7345:01025] Signal code: Invalid permissions (2)
+[c7345:01025] Failing at address: 0x7fd8f7689668
+[c7216:21350] *** Process received signal ***
+[c7216:21350] Signal: Segmentation fault (11)
+[c7216:21350] Signal code: Invalid permissions (2)
+[c7216:21350] Failing at address: 0x7f7085221a60
+[c7218:01846] *** Process received signal ***
+[c7333:04007] *** Process received signal ***
+[c7333:04007] Signal: Segmentation fault (11)
+[c7333:04007] Signal code: Invalid permissions (2)
+[c7333:04007] Failing at address: 0x7f3fa2878544
+[c7202:07778] *** Process received signal ***
+[c7202:07778] Signal: Segmentation fault (11)
+[c7202:07778] Signal code: Invalid permissions (2)
+[c7202:07778] Failing at address: 0x7fdbd0a210cc
+[c7215:01353] *** Process received signal ***
+[c7215:01353] Signal: Segmentation fault (11)
+[c7215:01353] Signal code: Invalid permissions (2)
+[c7215:01353] Failing at address: 0x7fec43f24650
+[c7346:16525] *** Process received signal ***
+[c7221:02780] *** Process received signal ***
+[c7220:07150] *** Process received signal ***
+[c7220:07150] Signal: Segmentation fault (11)
+[c7220:07150] Signal code: Invalid permissions (2)
+[c7220:07150] Failing at address: 0x7f76c1f77794
+[c7336:15550] *** Process received signal ***
+[c7336:15550] Signal: Segmentation fault (11)
+[c7336:15550] Signal code: Invalid permissions (2)
+[c7336:15550] Failing at address: 0x7f2f1a0244e8
+[c7334:03943] *** Process received signal ***
+[c7345:01029] *** Process received signal ***
+[c7345:01029] Signal: Segmentation fault (11)
+[c7345:01029] Signal code: Invalid permissions (2)
+[c7345:01029] Failing at address: 0x7f347d421b44
+[c7216:21353] *** Process received signal ***
+[c7218:01846] Signal: Segmentation fault (11)
+[c7218:01846] Signal code: Invalid permissions (2)
+[c7218:01846] Failing at address: 0x7ff7ace21200
+[c7333:04009] *** Process received signal ***
+[c7215:01359] *** Process received signal ***
+[c7201:06507] *** Process received signal ***
+[c7201:06507] Signal: Segmentation fault (11)
+[c7201:06507] Signal code: Invalid permissions (2)
+[c7201:06507] Failing at address: 0x7f81e6823514
+[c7346:16526] *** Process received signal ***
+[c7221:02785] *** Process received signal ***
+[c7220:07146] *** Process received signal ***
+[c7220:07146] Signal: Segmentation fault (11)
+[c7220:07146] Signal code: Invalid permissions (2)
+[c7220:07146] Failing at address: 0x7fc34d322dc4
+[c7204:07372] *** Process received signal ***
+[c7336:15543] *** Process received signal ***
+[c7334:03948] *** Process received signal ***
+[c7345:01028] *** Process received signal ***
+[c7218:01835] *** Process received signal ***
+[c7333:04011] *** Process received signal ***
+[c7333:04011] Signal: Segmentation fault (11)
+[c7333:04011] Signal code: Invalid permissions (2)
+[c7333:04011] Failing at address: 0x7f4b41c73dc8
+[c7202:07774] *** Process received signal ***
+[c7202:07774] Signal: Segmentation fault (11)
+[c7202:07774] Signal code: Invalid permissions (2)
+[c7202:07774] Failing at address: 0x7f22e70230fc
+[c7215:01351] *** Process received signal ***
+[c7215:01351] Signal: Segmentation fault (11)
+[c7215:01351] Signal code: Invalid permissions (2)
+[c7215:01351] Failing at address: 0x7f928dac83a8
+[c7201:06508] *** Process received signal ***
+[c7346:16523] *** Process received signal ***
+[c7221:02784] *** Process received signal ***
+[c7221:02784] Signal: Segmentation fault (11)
+[c7221:02784] Signal code: Invalid permissions (2)
+[c7221:02784] Failing at address: 0x7f75dcc21fb4
+[c7220:07154] *** Process received signal ***
+[c7204:07372] Signal: Segmentation fault (11)
+[c7204:07372] Signal code: Invalid permissions (2)
+[c7204:07372] Failing at address: 0x7f9000921940
+[c7336:15549] *** Process received signal ***
+[c7345:01031] *** Process received signal ***
+[c7345:01031] Signal: Segmentation fault (11)
+[c7345:01031] Signal code: Invalid permissions (2)
+[c7345:01031] Failing at address: 0x7fba8a324aac
+[c7218:01835] Signal: Segmentation fault (11)
+[c7218:01835] Signal code: Invalid permissions (2)
+[c7218:01835] Failing at address: 0x7fc5fd225420
+[c7333:04015] *** Process received signal ***
+[c7202:07780] Signal: Segmentation fault (11)
+[c7202:07780] Signal code: Invalid permissions (2)
+[c7202:07780] Failing at address: 0x7f55150252d4
+[c7215:01354] *** Process received signal ***
+[c7215:01354] Signal: Segmentation fault (11)
+[c7215:01354] Signal code: Invalid permissions (2)
+[c7215:01354] Failing at address: 0x7f949b023260
+[c7201:06504] *** Process received signal ***
+[c7346:16530] *** Process received signal ***
+[c7221:02790] *** Process received signal ***
+[c7221:02790] Signal: Segmentation fault (11)
+[c7221:02790] Signal code: Invalid permissions (2)
+[c7221:02790] Failing at address: 0x7f1f41723028
+[c7220:07151] *** Process received signal ***
+[c7204:07367] *** Process received signal ***
+[c7204:07367] Signal: Segmentation fault (11)
+[c7204:07367] Signal code: Invalid permissions (2)
+[c7204:07367] Failing at address: 0x7f8c4d2d3558
+[c7336:15546] *** Process received signal ***
+[c7345:01024] *** Process received signal ***
+[c7220:07145] *** Process received signal ***
+[c7220:07145] Signal: Segmentation fault (11)
+[c7220:07145] Signal code: Invalid permissions (2)
+[c7220:07145] Failing at address: 0x7f8d9a725478
+[c7204:07368] *** Process received signal ***
+[c7334:03947] *** Process received signal ***
+[c7345:01032] *** Process received signal ***
+[c7218:01844] *** Process received signal ***
+[c7218:01844] Signal: Segmentation fault (11)
+[c7218:01844] Signal code: Invalid permissions (2)
+[c7218:01844] Failing at address: 0x7fe6038862b8
+[c7333:04015] Signal: Segmentation fault (11)
+[c7333:04015] Signal code: Address not mapped (1)
+[c7333:04015] Failing at address: 0x7f7b6c802c88
+[c7202:07777] *** Process received signal ***
+[c7201:06504] Signal: Segmentation fault (11)
+[c7201:06504] Signal code: Invalid permissions (2)
+[c7201:06504] Failing at address: 0x7f6ad0e241dc
+[c7346:16531] *** Process received signal ***
+[c7221:02787] *** Process received signal ***
+[c6647:29375] *** Process received signal ***
+[c7205:05640] *** Process received signal ***
+[c7205:05640] Signal: Segmentation fault (11)
+[c7205:05640] Signal code: Invalid permissions (2)
+[c7205:05640] Failing at address: 0x7f040642305c
+[c7333:04005] *** Process received signal ***
+[c7202:07769] *** Process received signal ***
+[c7201:06505] *** Process received signal ***
+[c7346:16531] Signal: Segmentation fault (11)
+[c7346:16531] Signal code: Invalid permissions (2)
+[c7346:16531] Failing at address: 0x7f254b679fa4
+[c7221:02786] *** Process received signal ***
+[c7204:07368] Signal: Segmentation fault (11)
+[c7204:07368] Signal code: Invalid permissions (2)
+[c7204:07368] Failing at address: 0x7fd5e92213c0
+[c7334:03946] *** Process received signal ***
+[c7345:01032] Signal: Segmentation fault (11)
+[c7345:01032] Signal code: Invalid permissions (2)
+[c7345:01032] Failing at address: 0x7f19c7f23ab4
+[c7205:05647] *** Process received signal ***
+[c7218:01845] *** Process received signal ***
+[c7333:04013] *** Process received signal ***
+[c7202:07770] *** Process received signal ***
+[c7215:01348] *** Process received signal ***
+[c7201:06511] *** Process received signal ***
+[c7221:02786] Signal: Segmentation fault (11)
+[c7221:02786] Signal code: Invalid permissions (2)
+[c7221:02786] Failing at address: 0x7f68c7d240b8
+[c7204:07375] *** Process received signal ***
+[c7204:07375] Signal: Segmentation fault (11)
+[c7204:07375] Signal code: Invalid permissions (2)
+[c7204:07375] Failing at address: 0x7f1bb47216e0
+[c7205:05639] *** Process received signal ***
+[c7218:01845] Signal: Segmentation fault (11)
+[c7218:01845] Signal code: Invalid permissions (2)
+[c7218:01845] Failing at address: 0x7f371e6245ac
+[c7202:07779] *** Process received signal ***
+[c7202:07779] Signal: Segmentation fault (11)
+[c7202:07779] Signal code: Invalid permissions (2)
+[c7202:07779] Failing at address: 0x7f9e968229a0
+[c7207:04445] *** Process received signal ***
+[c7201:06510] *** Process received signal ***
+[c7218:01837] *** Process received signal ***
+[c7207:04448] *** Process received signal ***
+[c7207:04448] Signal: Segmentation fault (11)
+[c7207:04448] Signal code: Invalid permissions (2)
+[c7207:04448] Failing at address: 0x7fdd5082539c
+[c7345:01026] *** Process received signal ***
+[c7218:01837] Signal: Segmentation fault (11)
+[c7218:01837] Signal code: Invalid permissions (2)
+[c7218:01837] Failing at address: 0x7f381c321c18
+[c7204:07369] *** Process received signal ***
+[c7204:07369] Signal: Segmentation fault (11)
+[c7204:07369] Signal code: Address not mapped (1)
+[c7204:07369] Failing at address: 0x7f9f335047dc
+[c7204:07376] *** Process received signal ***
+[c7204:07376] Signal: Segmentation fault (11)
+[c7204:07376] Signal code: Invalid permissions (2)
+[c7204:07376] Failing at address: 0x7f06c6e22094
+[c7334:03949] *** Process received signal ***
+[c7215:01349] *** Process received signal ***
+[c7336:15539] *** Process received signal ***
+[c6647:29373] *** Process received signal ***
+[c6647:29373] Signal: Segmentation fault (11)
+[c6647:29373] Signal code: Invalid permissions (2)
+[c6647:29373] Failing at address: 0x7f601fa8bc90
+[c7207:04449] *** Process received signal ***
+[c7207:04452] *** Process received signal ***
+[c7207:04452] Signal: Segmentation fault (11)
+[c7207:04452] Signal code: Invalid permissions (2)
+[c7207:04452] Failing at address: 0x7fda6b273d40
+[c6647:29371] *** Process received signal ***
+[c7205:05645] *** Process received signal ***
+[c7205:05645] Signal: Segmentation fault (11)
+[c7205:05645] Signal code: Invalid permissions (2)
+[c7205:05645] Failing at address: 0x7fe58ec245dc
+[c7205:05650] *** Process received signal ***
+[c7205:05650] Signal: Segmentation fault (11)
+[c7205:05650] Signal code: Invalid permissions (2)
+[c7205:05650] Failing at address: 0x7f6142623170
+[c7205:05641] *** Process received signal ***
+[c7205:05641] Signal: Segmentation fault (11)
+[c7205:05641] Signal code: Address not mapped (1)
+[c7205:05641] Failing at address: 0x7fb952f07978
+[c7207:04451] *** Process received signal ***
+[c7207:04444] *** Process received signal ***
+[c7207:04444] Signal: Segmentation fault (11)
+[c7207:04444] Signal code: Invalid permissions (2)
+[c7207:04444] Failing at address: 0x7f5ad912185c
+[c7207:04453] *** Process received signal ***
+[c7205:05643] *** Process received signal ***
+[c7205:05643] Signal: Segmentation fault (11)
+[c7205:05643] Signal code: Invalid permissions (2)
+[c7205:05643] Failing at address: 0x7fccbda24614
+[c7205:05644] *** Process received signal ***
+[c7205:05648] *** Process received signal ***
+[c7207:04446] *** Process received signal ***
+[c7207:04450] *** Process received signal ***
+[c7333:04014] *** Process received signal ***
+[c7333:04014] Signal: Segmentation fault (11)
+[c7333:04014] Signal code: Invalid permissions (2)
+[c7333:04014] Failing at address: 0x7efc72c24148
+[c7205:05646] *** Process received signal ***
+[c7205:05646] Signal: Segmentation fault (11)
+[c7205:05646] Signal code: Invalid permissions (2)
+[c7205:05646] Failing at address: 0x7f2cd2b7cdf0
+[c7207:04454] *** Process received signal ***
+[c7207:04447] *** Process received signal ***
+[c7204:07371] *** Process received signal ***
+[c7204:07371] Signal: Segmentation fault (11)
+[c7204:07371] Signal code: Invalid permissions (2)
+[c7204:07371] Failing at address: 0x7fde9e021520
+[c7216:21361] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7f843f750790]
+[c7216:21361] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7216:21361] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7216:21361] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7216:21361] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7f843fb8302e]
+[c7216:21361] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7f843f748a51]
+[c7216:21361] [ 6] /lib64/libc.so.6(clone+0x6d)[0x7f843f49593d]
+[c7216:21361] *** End of error message ***
+[c6647:29333] [[2468,0],0]->[[2468,0],2] mca_oob_tcp_msg_send_bytes: write failed: Broken pipe (32) [sd = 18]
+[c6647:29333] [[2468,0],0]-[[2468,0],2] mca_oob_tcp_peer_send_handler: unable to send header
+[c7216:21717] *** Process received signal ***
+[c7216:21717] Signal: Segmentation fault (11)
+[c7216:21717] Signal code: Invalid permissions (2)
+[c7216:21717] Failing at address: 0x7f89d9a2172c
+[c7218:02197] *** Process received signal ***
+[c7218:02197] Signal: Segmentation fault (11)
+[c7218:02197] Signal code: Invalid permissions (2)
+[c7218:02197] Failing at address: 0x7f4f0a123a44
+[c7216:21724] *** Process received signal ***
+[c7216:21724] Signal: Segmentation fault (11)
+[c7216:21724] Signal code: Invalid permissions (2)
+[c7216:21724] Failing at address: 0x7fcaef325130
+[c7220:07510] *** Process received signal ***
+[c7220:07513] *** Process received signal ***
+[c7218:02190] *** Process received signal ***
+[c7218:02190] Signal: Segmentation fault (11)
+[c7218:02190] Signal code: Invalid permissions (2)
+[c7218:02190] Failing at address: 0x7ff38ba23ed4
+[c7216:21721] *** Process received signal ***
+[c7218:02194] *** Process received signal ***
+[c7216:21726] *** Process received signal ***
+[c7218:02198] *** Process received signal ***
+[c7218:02198] Signal: Segmentation fault (11)
+[c7218:02198] Signal code: Invalid permissions (2)
+[c7218:02198] Failing at address: 0x7fc2c9d2f3e0
+[c7220:07514] *** Process received signal ***
+[c7215:01756] *** Process received signal ***
+[c7216:21723] *** Process received signal ***
+[c7220:07516] *** Process received signal ***
+[c7215:01761] *** Process received signal ***
+[c7220:07512] *** Process received signal ***
+[c7215:01758] *** Process received signal ***
+[c7215:01759] *** Process received signal ***
+[c7216:21718] *** Process received signal ***
+[c7215:01754] *** Process received signal ***
+[c7215:01754] Signal: Segmentation fault (11)
+[c7215:01754] Signal code: Invalid permissions (2)
+[c7215:01754] Failing at address: 0x7f79d8c2332c
+[c7216:21719] *** Process received signal ***
+[c7216:21718] Signal: Segmentation fault (11)
+[c7216:21718] Signal code: Invalid permissions (2)
+[c7216:21718] Failing at address: 0x7f02859765d4
+[c7216:21725] *** Process received signal ***
+[c7216:21719] Signal: Segmentation fault (11)
+[c7216:21719] Signal code: Invalid permissions (2)
+[c7216:21719] Failing at address: 0x7fe9e4f21b94
+[c7216:21722] *** Process received signal ***
+[c7216:21722] Signal: Segmentation fault (11)
+[c7216:21722] Signal code: Invalid permissions (2)
+[c7216:21722] Failing at address: 0x7f702e624fa4
+[c7218:02193] *** Process received signal ***
+[c7218:02193] Signal: Segmentation fault (11)
+[c7218:02193] Signal code: Invalid permissions (2)
+[c7218:02193] Failing at address: 0x7fb306e2193c
+[c7216:21725] Signal: Segmentation fault (11)
+[c7216:21725] Signal code: Invalid permissions (2)
+[c7216:21725] Failing at address: 0x7f6330c23980
+[c7218:02195] *** Process received signal ***
+[c7218:02196] *** Process received signal ***
+[c7215:01755] *** Process received signal ***
+[c7215:01755] Signal: Segmentation fault (11)
+[c7215:01755] Signal code: Invalid permissions (2)
+[c7215:01755] Failing at address: 0x7f0d0c372890
+[c7221:03200] *** Process received signal ***
+[c6647:29593] *** Process received signal ***
+[c6647:29593] Signal: Segmentation fault (11)
+[c6647:29593] Signal code: Invalid permissions (2)
+[c6647:29593] Failing at address: 0x7f7b3fa72ae0
+[c6647:29592] *** Process received signal ***
+[c6647:29592] Signal: Segmentation fault (11)
+[c6647:29592] Signal code: Invalid permissions (2)
+[c6647:29592] Failing at address: 0x7f2aaac21478
+[c6647:29592] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7f2ba0001790]
+[c6647:29592] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c6647:29592] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c6647:29592] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c6647:29592] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7f2ba043402e]
+[c6647:29592] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7f2b9fff9a51]
+[c6647:29592] [ 6] /lib64/libc.so.6(clone+0x6d)[0x7f2b9fd4693d]
+[c6647:29592] *** End of error message ***
+[c7218:02201] *** Process received signal ***
+[c7333:04369] *** Process received signal ***
+[c7333:04369] Signal: Segmentation fault (11)
+[c7333:04369] Signal code: Invalid permissions (2)
+[c7333:04369] Failing at address: 0x7f08017240a0
+[c7215:01757] *** Process received signal ***
+[c7215:01757] Signal: Segmentation fault (11)
+[c7215:01757] Signal code: Invalid permissions (2)
+[c7215:01757] Failing at address: 0x7f4f85a24650
+[c7216:21715] *** Process received signal ***
+[c7216:21715] Signal: Segmentation fault (11)
+[c7216:21715] Signal code: Invalid permissions (2)
+[c7216:21715] Failing at address: 0x7eff1b925718
+[c7336:15905] *** Process received signal ***
+[c7201:06875] *** Process received signal ***
+[c7201:06875] Signal: Segmentation fault (11)
+[c7201:06875] Signal code: Invalid permissions (2)
+[c7201:06875] Failing at address: 0x7fbac8625758
+[c7346:16892] *** Process received signal ***
+[c7346:16892] Signal: Segmentation fault (11)
+[c7346:16892] Signal code: Invalid permissions (2)
+[c7346:16892] Failing at address: 0x7f626962193c
+[c7204:07734] *** Process received signal ***
+[c7202:08139] *** Process received signal ***
+[c7334:04313] *** Process received signal ***
+[c7218:02199] *** Process received signal ***
+[c7333:04373] *** Process received signal ***
+[c7333:04373] Signal: Segmentation fault (11)
+[c7333:04373] Signal code: Invalid permissions (2)
+[c7333:04373] Failing at address: 0x7f586e224a94
+[c7205:06004] *** Process received signal ***
+[c7215:01762] *** Process received signal ***
+[c7216:21716] *** Process received signal ***
+[c7336:15913] *** Process received signal ***
+[c7336:15913] Signal: Segmentation fault (11)
+[c7336:15913] Signal code: Invalid permissions (2)
+[c7336:15913] Failing at address: 0x7ff829d24100
+[c7201:06877] *** Process received signal ***
+[c7201:06877] Signal: Segmentation fault (11)
+[c7201:06877] Signal code: Invalid permissions (2)
+[c7201:06877] Failing at address: 0x7fa619424174
+[c7345:01391] *** Process received signal ***
+[c7346:16887] *** Process received signal ***
+[c7204:07731] *** Process received signal ***
+[c7202:08146] *** Process received signal ***
+[c6647:29600] *** Process received signal ***
+[c6647:29600] Signal: Segmentation fault (11)
+[c6647:29600] Signal code: Address not mapped (1)
+[c6647:29600] Failing at address: 0x7f624c002d64
+[c7221:03197] *** Process received signal ***
+[c7218:02191] *** Process received signal ***
+[c7218:02191] Signal: Segmentation fault (11)
+[c7218:02191] Signal code: Invalid permissions (2)
+[c7218:02191] Failing at address: 0x7faac3e73f50
+[c7333:04377] *** Process received signal ***
+[c7333:04377] Signal: Segmentation fault (11)
+[c7333:04377] Signal code: Invalid permissions (2)
+[c7333:04377] Failing at address: 0x7f461c026d18
+[c7205:06011] *** Process received signal ***
+[c7215:01763] *** Process received signal ***
+[c7336:15913] [ 0] [c7207:04888] *** Process received signal ***
+[c7207:04888] Signal: Segmentation fault (11)
+[c7207:04888] Signal code: Invalid permissions (2)
+[c7207:04888] Failing at address: 0x7f66ec373dc0
+[c7201:06884] *** Process received signal ***
+[c7345:01394] *** Process received signal ***
+[c7345:01394] Signal: Segmentation fault (11)
+[c7345:01394] Signal code: Invalid permissions (2)
+[c7345:01394] Failing at address: 0x7fe66062193c
+[c7345:01394] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7fe7551ba790]
+[c7345:01394] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7345:01394] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7345:01394] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7345:01394] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7fe7555ed02e]
+[c7345:01394] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7fe7551b2a51]
+[c7345:01394] [ 6] /lib64/libc.so.6(clone+0x6d)[0x7fe754eff93d]
+[c7345:01394] *** End of error message ***
+[c7346:16893] *** Process received signal ***
+[c7346:16893] Signal: Segmentation fault (11)
+[c7346:16893] Signal code: Invalid permissions (2)
+[c7346:16893] Failing at address: 0x7f7f0e4229ac
+[c7204:07732] *** Process received signal ***
+[c7204:07732] Signal: Segmentation fault (11)
+[c7204:07732] Signal code: Address not mapped (1)
+[c7204:07732] Failing at address: 0x7f1bcc005668
+[c7218:02192] *** Process received signal ***
+[c7333:04379] *** Process received signal ***
+[c7333:04379] Signal: Segmentation fault (11)
+[c7333:04379] Signal code: Invalid permissions (2)
+[c7333:04379] Failing at address: 0x7f48d5023564
+[c7215:01762] Signal: Segmentation fault (11)
+[c7215:01762] Signal code: Invalid permissions (2)
+[c7215:01762] Failing at address: 0x7efd6d6256f8
+/lib64/libpthread.so.0(+0xf790)[0x7ff91e6a8790]
+[c7336:15913] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7336:15913] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7336:15913] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7336:15913] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7ff91eadb02e]
+[c7336:15913] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7ff91e6a0a51]
+[c7336:15913] [ 6] [c7207:04890] *** Process received signal ***
+[c7201:06881] *** Process received signal ***
+[c7201:06881] Signal: Segmentation fault (11)
+[c7201:06881] Signal code: Invalid permissions (2)
+[c7201:06881] Failing at address: 0x7fc9a5e219b8
+[c7345:01395] *** Process received signal ***
+[c7345:01395] Signal: Segmentation fault (11)
+[c7345:01395] Signal code: Invalid permissions (2)
+[c7345:01395] Failing at address: 0x7fc9c432376c
+[c7205:06006] *** Process received signal ***
+/lib64/libc.so.6(clone+0x6d)[0x7ff91e3ed93d]
+[c7336:15913] *** End of error message ***
+[c7207:04891] *** Process received signal ***
+[c7201:06883] *** Process received signal ***
+[c7201:06883] Signal: Segmentation fault (11)
+[c7201:06883] Signal code: Invalid permissions (2)
+[c7201:06883] Failing at address: 0x7fd59bc229c4
+[c7345:01396] *** Process received signal ***
+[c7345:01396] Signal: Segmentation fault (11)
+[c7345:01396] Signal code: Invalid permissions (2)
+[c7345:01396] Failing at address: 0x7feacd422bc4
+[c7346:16897] *** Process received signal ***
+[c7220:07515] *** Process received signal ***
+[c7204:07738] *** Process received signal ***
+[c7221:03190] *** Process received signal ***
+[c7205:06009] *** Process received signal ***
+[c7215:01753] *** Process received signal ***
+[c7215:01753] Signal: Segmentation fault (11)
+[c7215:01753] Signal code: Invalid permissions (2)
+[c7215:01753] Failing at address: 0x7f8507d23d5c
+[c7336:15915] *** Process received signal ***
+[c7336:15915] Signal: Segmentation fault (11)
+[c7336:15915] Signal code: Invalid permissions (2)
+[c7336:15915] Failing at address: 0x7f212f82267c
+[c7207:04897] *** Process received signal ***
+[c7207:04897] Signal: Segmentation fault (11)
+[c7207:04897] Signal code: Invalid permissions (2)
+[c7207:04897] Failing at address: 0x7f034c92381c
+[c7345:01402] *** Process received signal ***
+[c7345:01402] Signal: Segmentation fault (11)
+[c7345:01402] Signal code: Invalid permissions (2)
+[c7345:01402] Failing at address: 0x7efec3173960
+[c7220:07518] *** Process received signal ***
+[c7204:07737] *** Process received signal ***
+[c7204:07737] Signal: Segmentation fault (11)
+[c7204:07737] Signal code: Invalid permissions (2)
+[c7204:07737] Failing at address: 0x7f7d8a52527c
+[c7221:03189] *** Process received signal ***
+[c7333:04372] *** Process received signal ***
+[c7205:06015] *** Process received signal ***
+[c7205:06015] Signal: Segmentation fault (11)
+[c7205:06015] Signal code: Invalid permissions (2)
+[c7205:06015] Failing at address: 0x7f6d52323a7c
+[c7207:04896] *** Process received signal ***
+[c7220:07511] *** Process received signal ***
+[c7221:03196] *** Process received signal ***
+[c7333:04371] *** Process received signal ***
+[c7205:06010] *** Process received signal ***
+[c7205:06010] Signal: Segmentation fault (11)
+[c7205:06010] Signal code: Invalid permissions (2)
+[c7205:06010] Failing at address: 0x7f2294324388
+[c7220:07511] Signal: Segmentation fault (11)
+[c7220:07511] Signal code: Invalid permissions (2)
+[c7220:07511] Failing at address: 0x7f37510253dc
+[c7202:08140] *** Process received signal ***
+[c7333:04374] *** Process received signal ***
+[c7333:04374] Signal: Segmentation fault (11)
+[c7333:04374] Signal code: Invalid permissions (2)
+[c7333:04374] Failing at address: 0x7fd726623eb8
+[c7336:15908] *** Process received signal ***
+[c7336:15908] Signal: Segmentation fault (11)
+[c7336:15908] Signal code: Invalid permissions (2)
+[c7336:15908] Failing at address: 0x7f6b31023ab4
+[c7201:06882] *** Process received signal ***
+[c7201:06882] Signal: Segmentation fault (11)
+[c7201:06882] Signal code: Invalid permissions (2)
+[c7201:06882] Failing at address: 0x7f55a4a2507c
+[c7220:07520] *** Process received signal ***
+[c7220:07520] Signal: Segmentation fault (11)
+[c7220:07520] Signal code: Invalid permissions (2)
+[c7220:07520] Failing at address: 0x7efba9b22e50
+[c7202:08143] *** Process received signal ***
+[c7202:08143] Signal: Segmentation fault (11)
+[c7202:08143] Signal code: Invalid permissions (2)
+[c7202:08143] Failing at address: 0x7fdda3e74208
+[c7334:04307] *** Process received signal ***
+[c6647:29589] *** Process received signal ***
+[c6647:29589] Signal: Segmentation fault (11)
+[c6647:29589] Signal code: Invalid permissions (2)
+[c6647:29589] Failing at address: 0x7f14c1c28e08
+[c7221:03188] *** Process received signal ***
+[c7333:04376] *** Process received signal ***
+[c7333:04376] Signal: Segmentation fault (11)
+[c7333:04376] Signal code: Invalid permissions (2)
+[c7333:04376] Failing at address: 0x7fa90372524c
+[c7205:06014] *** Process received signal ***
+[c7205:06014] Signal: Segmentation fault (11)
+[c7205:06014] Signal code: Invalid permissions (2)
+[c7205:06014] Failing at address: 0x7f2437a241b8
+[c7336:15909] *** Process received signal ***
+[c7336:15909] Signal: Segmentation fault (11)
+[c7336:15909] Signal code: Invalid permissions (2)
+[c7336:15909] Failing at address: 0x7f853b622fc8
+[c7201:06876] *** Process received signal ***
+[c7201:06876] Signal: Segmentation fault (11)
+[c7201:06876] Signal code: Invalid permissions (2)
+[c7201:06876] Failing at address: 0x7f35c1f25b40
+[c7345:01398] *** Process received signal ***
+[c7345:01398] Signal: Segmentation fault (11)
+[c7345:01398] Signal code: Invalid permissions (2)
+[c7345:01398] Failing at address: 0x7f1d000248f8
+[c7346:16888] *** Process received signal ***
+[c7220:07521] *** Process received signal ***
+[c7220:07521] Signal: Segmentation fault (11)
+[c7220:07521] Signal code: Invalid permissions (2)
+[c7220:07521] Failing at address: 0x7fed57b22fbc
+[c7204:07741] *** Process received signal ***
+[c7204:07741] Signal: Segmentation fault (11)
+[c7204:07741] Signal code: Invalid permissions (2)
+[c7204:07741] Failing at address: 0x7f73f4422e60
+[c7202:08148] *** Process received signal ***
+[c7202:08148] Signal: Segmentation fault (11)
+[c7202:08148] Signal code: Invalid permissions (2)
+[c7202:08148] Failing at address: 0x7f6eba424840
+[c7334:04314] *** Process received signal ***
+[c7334:04314] Signal: Segmentation fault (11)
+[c7334:04314] Signal code: Invalid permissions (2)
+[c7334:04314] Failing at address: 0x7fcbb48247b4
+[c7221:03198] *** Process received signal ***
+[c7333:04372] Signal: Segmentation fault (11)
+[c7333:04372] Signal code: Invalid permissions (2)
+[c7333:04372] Failing at address: 0x7f4c323235b4
+[c7336:15906] *** Process received signal ***
+[c7336:15906] Signal: Segmentation fault (11)
+[c7336:15906] Signal code: Invalid permissions (2)
+[c7336:15906] Failing at address: 0x7f2a3e62206c
+[c7345:01393] *** Process received signal ***
+[c7346:16891] *** Process received signal ***
+[c7220:07519] *** Process received signal ***
+[c7204:07733] *** Process received signal ***
+[c7221:03191] *** Process received signal ***
+[c7221:03191] Signal: Segmentation fault (11)
+[c7221:03191] Signal code: Invalid permissions (2)
+[c7221:03191] Failing at address: 0x7f2e82173898
+[c7333:04371] Signal: Segmentation fault (11)
+[c7333:04371] Signal code: Address not mapped (1)
+[c7333:04371] Failing at address: 0x12bce04
+[c7201:06878] *** Process received signal ***
+[c7201:06878] Signal: Segmentation fault (11)
+[c7201:06878] Signal code: Invalid permissions (2)
+[c7201:06878] Failing at address: 0x7fcdc8322c58
+[c7345:01399] *** Process received signal ***
+[c7345:01399] Signal: Segmentation fault (11)
+[c7345:01399] Signal code: Invalid permissions (2)
+[c7345:01399] Failing at address: 0x7f14ebd22f3c
+[c7346:16891] Signal: Segmentation fault (11)
+[c7346:16891] Signal code: Invalid permissions (2)
+[c7346:16891] Failing at address: 0x7f6a1c424198
+[c7220:07517] *** Process received signal ***
+[c7204:07740] *** Process received signal ***
+[c7202:08137] *** Process received signal ***
+[c7333:04376] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7fa9f6c64790]
+[c7333:04376] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7333:04376] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7333:04376] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7333:04376] [ 4] [c7336:15910] *** Process received signal ***
+[c7336:15910] Signal: Segmentation fault (11)
+[c7336:15910] Signal code: Invalid permissions (2)
+[c7336:15910] Failing at address: 0x7f18609244bc
+[c7201:06876] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7f36b5253790]
+[c7201:06876] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7201:06876] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7201:06876] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7201:06876] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7f36b568602e]
+[c7201:06876] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7f36b524ba51]
+[c7201:06876] [ 6] /lib64/libc.so.6(clone+0x6d)[0x7f36b4f9893d]
+[c7201:06876] *** End of error message ***
+[c7346:16895] *** Process received signal ***
+[c7204:07736] *** Process received signal ***
+[c7202:08138] *** Process received signal ***
+[c7202:08138] Signal: Segmentation fault (11)
+[c7202:08138] Signal code: Invalid permissions (2)
+[c7202:08138] Failing at address: 0x7f66973865f8
+[c7334:04316] *** Process received signal ***
+/opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7fa9f709702e]
+[c7333:04376] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7fa9f6c5ca51]
+[c7333:04376] [ 6] [c7336:15907] *** Process received signal ***
+[c7201:06873] *** Process received signal ***
+[c7345:01397] *** Process received signal ***
+[c7346:16896] *** Process received signal ***
+[c7346:16896] Signal: Segmentation fault (11)
+[c7346:16896] Signal code: Invalid permissions (2)
+[c7346:16896] Failing at address: 0x7fe8c9b21518
+[c7204:07730] *** Process received signal ***
+[c7202:08144] *** Process received signal ***
+[c7334:04310] *** Process received signal ***
+[c6647:29591] *** Process received signal ***
+[c7221:03194] *** Process received signal ***
+/lib64/libc.so.6(clone+0x6d)[0x7fa9f69a993d]
+[c7333:04376] *** End of error message ***
+[c7205:06005] *** Process received signal ***
+[c7201:06878] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7fcebb9f8790]
+[c7201:06878] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7201:06878] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7201:06878] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7201:06878] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7fcebbe2b02e]
+[c7345:01397] Signal: Segmentation fault (11)
+[c7345:01397] Signal code: Invalid permissions (2)
+[c7345:01397] Failing at address: 0x7f6469221b44
+[c7204:07739] *** Process received signal ***
+[c7204:07739] Signal: Segmentation fault (11)
+[c7204:07739] Signal code: Invalid permissions (2)
+[c7204:07739] Failing at address: 0x7f9bcbc235cc
+[c7334:04310] Signal: Segmentation fault (11)
+[c7334:04310] Signal code: Invalid permissions (2)
+[c7334:04310] Failing at address: 0x7fa866f24bcc
+[c7221:03193] *** Process received signal ***
+[c7333:04378] *** Process received signal ***
+[c7205:06008] *** Process received signal ***
+[c7207:04886] *** Process received signal ***
+[c7201:06878] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7fcebb9f0a51]
+[c7201:06878] [ 6] [c7345:01392] *** Process received signal ***
+[c7221:03193] Signal: Segmentation fault (11)
+[c7221:03193] Signal code: Invalid permissions (2)
+[c7221:03193] Failing at address: 0x7fd42f323be4
+[c7333:04380] *** Process received signal ***
+[c7205:06013] *** Process received signal ***
+[c7205:06013] Signal: Segmentation fault (11)
+[c7205:06013] Signal code: Invalid permissions (2)
+[c7205:06013] Failing at address: 0x7fd9a9a256e4
+[c7215:01752] *** Process received signal ***
+[c7215:01752] Signal: Segmentation fault (11)
+[c7215:01752] Signal code: Address not mapped (1)
+[c7215:01752] Failing at address: 0x7f03cff01288
+[c7207:04894] *** Process received signal ***
+[c7202:08142] *** Process received signal ***
+[c6647:29590] *** Process received signal ***
+[c7221:03195] *** Process received signal ***
+[c7333:04370] *** Process received signal ***
+[c7207:04895] *** Process received signal ***
+[c7207:04895] Signal: Segmentation fault (11)
+[c7207:04895] Signal code: Invalid permissions (2)
+[c7207:04895] Failing at address: 0x7f5a02e2200c
+/lib64/libc.so.6(clone+0x6d)[0x7fcebb73d93d]
+[c7201:06878] *** End of error message ***
+[c7333:04370] Signal: Segmentation fault (11)
+[c7333:04370] Signal code: Invalid permissions (2)
+[c7333:04370] Failing at address: 0x7f52e67224f0
+[c7336:15912] *** Process received signal ***
+[c7336:15912] Signal: Segmentation fault (11)
+[c7336:15912] Signal code: Invalid permissions (2)
+[c7336:15912] Failing at address: 0x7f47fb473020
+[c7207:04889] *** Process received signal ***
+[c7201:06880] *** Process received signal ***
+[c7221:03192] *** Process received signal ***
+[c6647:29597] *** Process received signal ***
+[c7345:01400] *** Process received signal ***
+[c7345:01400] Signal: Segmentation fault (11)
+[c7345:01400] Signal code: Invalid permissions (2)
+[c7345:01400] Failing at address: 0x7fb06f623bf0
+[c7207:04893] *** Process received signal ***
+[c7333:04369] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7f08f5f59790]
+[c7333:04369] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7333:04369] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7333:04369] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7333:04369] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7f08f638c02e]
+[c7333:04369] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7f08f5f51a51]
+[c7333:04369] [ 6] /lib64/libc.so.6(clone+0x6d)[0x7f08f5c9e93d]
+[c7333:04369] *** End of error message ***
+[c7201:06874] *** Process received signal ***
+[c7201:06874] Signal: Segmentation fault (11)
+[c7201:06874] Signal code: Invalid permissions (2)
+[c7201:06874] Failing at address: 0x7fb07d923c18
+[c7334:04311] *** Process received signal ***
+[c7334:04311] Signal: Segmentation fault (11)
+[c7334:04311] Signal code: Invalid permissions (2)
+[c7334:04311] Failing at address: 0x7ff37de21dbc
+[c7346:16890] *** Process received signal ***
+[c7346:16894] *** Process received signal ***
+[c7346:16894] Signal: Segmentation fault (11)
+[c7346:16894] Signal code: Invalid permissions (2)
+[c7346:16894] Failing at address: 0x7fdcc3f23924
+[c6647:29599] *** Process received signal ***
+[c6647:29599] Signal: Segmentation fault (11)
+[c6647:29599] Signal code: Invalid permissions (2)
+[c6647:29599] Failing at address: 0x7f06b552193c
+[c7334:04317] *** Process received signal ***
+[c7334:04317] Signal: Segmentation fault (11)
+[c7334:04317] Signal code: Invalid permissions (2)
+[c7334:04317] Failing at address: 0x7fbf84d22bfc
+[c7202:08141] *** Process received signal ***
+[c7334:04315] *** Process received signal ***
+[c6647:29595] *** Process received signal ***
+[c6647:29595] Signal: Segmentation fault (11)
+[c6647:29595] Signal code: Invalid permissions (2)
+[c6647:29595] Failing at address: 0x7f8212d21938
+[c7202:08145] *** Process received signal ***
+[c7202:08145] Signal: Segmentation fault (11)
+[c7202:08145] Signal code: Invalid permissions (2)
+[c7202:08145] Failing at address: 0x7f1cb4f23104
+[c7202:08145] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7f1da84da790]
+[c7202:08145] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7202:08145] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7202:08145] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7202:08145] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7f1da890d02e]
+[c7202:08145] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7f1da84d2a51]
+[c7202:08145] [ 6] /lib64/libc.so.6(clone+0x6d)[0x7f1da821f93d]
+[c7202:08145] *** End of error message ***
+[c7202:08147] *** Process received signal ***
+[c7346:16892] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7f635deed790]
+[c7346:16892] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7346:16892] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7346:16892] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7346:16892] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7f635e32002e]
+[c7346:16892] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7f635dee5a51]
+[c7346:16892] [ 6] /lib64/libc.so.6(clone+0x6d)[0x7f635dc3293d]
+[c7346:16892] *** End of error message ***
+[c7215:02116] *** Process received signal ***
+[c7215:02116] Signal: Segmentation fault (11)
+[c7215:02116] Signal code: Invalid permissions (2)
+[c7215:02116] Failing at address: 0x7f38e54dc8c8
+[c7216:22084] *** Process received signal ***
+[c7216:22084] Signal: Segmentation fault (11)
+[c7216:22084] Signal code: Invalid permissions (2)
+[c7216:22084] Failing at address: 0x7fa12f621228
+[c7215:02125] *** Process received signal ***
+[c7215:02117] *** Process received signal ***
+[c7215:02117] Signal: Segmentation fault (11)
+[c7215:02117] Signal code: Invalid permissions (2)
+[c7215:02117] Failing at address: 0x7fd77fbc861c
+[c7215:02123] *** Process received signal ***
+[c7215:02124] *** Process received signal ***
+[c7216:22078] *** Process received signal ***
+[c7215:02120] *** Process received signal ***
+[c7216:22080] *** Process received signal ***
+[c7215:02124] Signal: Segmentation fault (11)
+[c7215:02124] Signal code: Invalid permissions (2)
+[c7215:02124] Failing at address: 0x7f87bc724c24
+[c7216:22082] *** Process received signal ***
+[c7215:02120] Signal: Segmentation fault (11)
+[c7215:02120] Signal code: Invalid permissions (2)
+[c7215:02120] Failing at address: 0x7f03f532331c
+[c7216:22082] Signal: Segmentation fault (11)
+[c7216:22082] Signal code: Invalid permissions (2)
+[c7216:22082] Failing at address: 0x7f989c5770fc
+[c7216:22077] *** Process received signal ***
+[c7216:22077] Signal: Segmentation fault (11)
+[c7216:22077] Signal code: Invalid permissions (2)
+[c7216:22077] Failing at address: 0x7f6424b25024
+[c7216:22085] *** Process received signal ***
+[c7215:02119] *** Process received signal ***
+[c7215:02119] Signal: Segmentation fault (11)
+[c7215:02119] Signal code: Invalid permissions (2)
+[c7215:02119] Failing at address: 0x7f53e4e7a48c
+[c7216:22079] *** Process received signal ***
+[c7215:02121] *** Process received signal ***
+[c7215:02121] Signal: Segmentation fault (11)
+[c7215:02121] Signal code: Invalid permissions (2)
+[c7215:02121] Failing at address: 0x7f928bf7a504
+[c7216:22079] Signal: Segmentation fault (11)
+[c7216:22079] Signal code: Invalid permissions (2)
+[c7216:22079] Failing at address: 0x7f0ec4522f8c
+[c7216:22076] *** Process received signal ***
+[c7216:22076] Signal: Segmentation fault (11)
+[c7216:22076] Signal code: Invalid permissions (2)
+[c7216:22076] Failing at address: 0x7f5ac0c21940
+[c7216:22086] *** Process received signal ***
+[c7216:22086] Signal: Segmentation fault (11)
+[c7216:22086] Signal code: Invalid permissions (2)
+[c7216:22086] Failing at address: 0x7f2416f23f58
+[c7220:07877] *** Process received signal ***
+[c7220:07877] Signal: Segmentation fault (11)
+[c7220:07877] Signal code: Invalid permissions (2)
+[c7220:07877] Failing at address: 0x7fe939e23524
+[c7218:02626] *** Process received signal ***
+[c7218:02626] Signal: Segmentation fault (11)
+[c7218:02626] Signal code: Invalid permissions (2)
+[c7218:02626] Failing at address: 0x7f5871b23850
+[c7218:02633] *** Process received signal ***
+[c7218:02633] Signal: Segmentation fault (11)
+[c7218:02633] Signal code: Invalid permissions (2)
+[c7218:02633] Failing at address: 0x7f0fdce245ac
+[c7220:07879] *** Process received signal ***
+[c7220:07879] Signal: Segmentation fault (11)
+[c7220:07879] Signal code: Invalid permissions (2)
+[c7220:07879] Failing at address: 0x7fc303c24400
+[c7216:22087] *** Process received signal ***
+[c7333:04797] *** Process received signal ***
+[c7333:04797] Signal: Segmentation fault (11)
+[c7333:04797] Signal code: Invalid permissions (2)
+[c7333:04797] Failing at address: 0x7f7282823538
+[c7218:02626] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7f596500a790]
+[c7218:02626] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7218:02626] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7218:02626] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7218:02626] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7f596543d02e]
+[c7218:02626] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7f5965002a51]
+[c7218:02626] [ 6] /lib64/libc.so.6(clone+0x6d)[0x7f5964d4f93d]
+[c7218:02626] *** End of error message ***
+[c7333:04801] *** Process received signal ***
+[c7333:04801] Signal: Segmentation fault (11)
+[c7333:04801] Signal code: Invalid permissions (2)
+[c7333:04801] Failing at address: 0x7f000be24d84
+[c7333:04805] *** Process received signal ***
+[c7334:04672] *** Process received signal ***
+[c7334:04672] Signal: Segmentation fault (11)
+[c7334:04672] Signal code: Invalid permissions (2)
+[c7334:04672] Failing at address: 0x7f58366241d0
+[c7333:04808] *** Process received signal ***
+[c7333:04808] Signal: Segmentation fault (11)
+[c7333:04808] Signal code: Invalid permissions (2)
+[c7333:04808] Failing at address: 0x7f02af52193c
+[c7334:04673] *** Process received signal ***
+[c7334:04673] Signal: Segmentation fault (11)
+[c7334:04673] Signal code: Invalid permissions (2)
+[c7334:04673] Failing at address: 0x7f7758f2308c
+[c7215:02122] *** Process received signal ***
+[c7336:16258] *** Process received signal ***
+[c7336:16258] Signal: Segmentation fault (11)
+[c7336:16258] Signal code: Invalid permissions (2)
+[c7336:16258] Failing at address: 0x7f79a3322fb4
+[c7336:16262] *** Process received signal ***
+[c7336:16262] Signal: Segmentation fault (11)
+[c7336:16262] Signal code: Invalid permissions (2)
+[c7336:16262] Failing at address: 0x7f6f53526a60
+[c6647:29816] *** Process received signal ***
+[c6647:29809] *** Process received signal ***
+[c6647:29809] Signal: Segmentation fault (11)
+[c6647:29809] Signal code: Invalid permissions (2)
+[c6647:29809] Failing at address: 0x7f24c3625b08
+[c7345:01802] *** Process received signal ***
+[c7345:01802] Signal: Segmentation fault (11)
+[c7345:01802] Signal code: Invalid permissions (2)
+[c7345:01802] Failing at address: 0x7f802f5244a4
+[c7346:17252] *** Process received signal ***
+[c7346:17252] Signal: Segmentation fault (11)
+[c7346:17252] Signal code: Invalid permissions (2)
+[c7346:17252] Failing at address: 0x7f476112260c
+[c7345:01804] *** Process received signal ***
+[c7345:01804] Signal: Segmentation fault (11)
+[c7345:01804] Signal code: Invalid permissions (2)
+[c7345:01804] Failing at address: 0x7f99474248b0
+[c7346:17253] *** Process received signal ***
+[c7346:17253] Signal: Segmentation fault (11)
+[c7346:17253] Signal code: Invalid permissions (2)
+[c7346:17253] Failing at address: 0x7f779d7240d0
+[c7345:01811] *** Process received signal ***
+[c7345:01811] Signal: Segmentation fault (11)
+[c7345:01811] Signal code: Invalid permissions (2)
+[c7345:01811] Failing at address: 0x7f2c13325aac
+[c7345:01812] *** Process received signal ***
+[c7345:01812] Signal: Segmentation fault (11)
+[c7345:01812] Signal code: Invalid permissions (2)
+[c7345:01812] Failing at address: 0x7f13f002419c
+[c7346:17259] *** Process received signal ***
+[c7346:17259] Signal: Segmentation fault (11)
+[c7346:17259] Signal code: Invalid permissions (2)
+[c7346:17259] Failing at address: 0x7fa739524254
+[c7345:01813] *** Process received signal ***
+[c7345:01813] Signal: Segmentation fault (11)
+[c7345:01813] Signal code: Invalid permissions (2)
+[c7345:01813] Failing at address: 0x7f18e5f24c80
+[c7333:04803] *** Process received signal ***
+[c7346:17256] *** Process received signal ***
+[c7346:17256] Signal: Segmentation fault (11)
+[c7346:17256] Signal code: Invalid permissions (2)
+[c7346:17256] Failing at address: 0x7f524312399c
+[c7333:04803] Signal: Segmentation fault (11)
+[c7333:04803] Signal code: Invalid permissions (2)
+[c7333:04803] Failing at address: 0x7f14d8988f90
+[c7333:04807] *** Process received signal ***
+[c7333:04807] Signal: Segmentation fault (11)
+[c7333:04807] Signal code: Invalid permissions (2)
+[c7333:04807] Failing at address: 0x7f35a0a23a78
+[c7333:04807] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7f3695a1a790]
+[c7201:07239] *** Process received signal ***
+[c7201:07239] Signal: Segmentation fault (11)
+[c7201:07239] Signal code: Invalid permissions (2)
+[c7201:07239] Failing at address: 0x7f7abaa23c18
+[c7336:16267] *** Process received signal ***
+[c7333:04807] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7333:04807] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7333:04807] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7333:04807] [ 4] [c7201:07240] *** Process received signal ***
+[c7218:02631] *** Process received signal ***
+/opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7f3695e4d02e]
+[c7333:04807] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7f3695a12a51]
+[c7333:04807] [ 6] [c7201:07243] *** Process received signal ***
+[c7201:07243] Signal: Segmentation fault (11)
+[c7201:07243] Signal code: Invalid permissions (2)
+[c7201:07243] Failing at address: 0x7f5822e235b8
+/lib64/libc.so.6(clone+0x6d)[0x7f369575f93d]
+[c7333:04807] *** End of error message ***
+[c7201:07244] *** Process received signal ***
+[c7201:07244] Signal: Segmentation fault (11)
+[c7201:07244] Signal code: Invalid permissions (2)
+[c7201:07244] Failing at address: 0x7fe640a22680
+[c6647:29812] *** Process received signal ***
+[c6647:29813] *** Process received signal ***
+[c6647:29813] Signal: Segmentation fault (11)
+[c6647:29813] Signal code: Invalid permissions (2)
+[c6647:29813] Failing at address: 0x7f112e524b18
+[c6647:29815] *** Process received signal ***
+[c6647:29815] Signal: Segmentation fault (11)
+[c6647:29815] Signal code: Invalid permissions (2)
+[c6647:29815] Failing at address: 0x7f9b93b2193c
+[c6647:29817] *** Process received signal ***
+[c6647:29817] Signal: Segmentation fault (11)
+[c6647:29817] Signal code: Invalid permissions (2)
+[c6647:29817] Failing at address: 0x7f2cdf377cac
+[c6647:29820] *** Process received signal ***
+[c6647:29820] Signal: Segmentation fault (11)
+[c6647:29820] Signal code: Invalid permissions (2)
+[c6647:29820] Failing at address: 0x7f81b1d27a2c
+[c7346:17259] [ 0] [c7220:07871] *** Process received signal ***
+[c7201:07239] [ 0] [c7221:03589] *** Process received signal ***
+[c7221:03589] Signal: Segmentation fault (11)
+[c7221:03589] Signal code: Invalid permissions (2)
+[c7221:03589] Failing at address: 0x7fc1b0f73cc8
+[c7345:01809] *** Process received signal ***
+[c7345:01809] Signal: Segmentation fault (11)
+[c7345:01809] Signal code: Invalid permissions (2)
+[c7345:01809] Failing at address: 0x7fae34e23350
+[c7336:16265] *** Process received signal ***
+[c7336:16265] Signal: Segmentation fault (11)
+[c7336:16265] Signal code: Invalid permissions (2)
+[c7336:16265] Failing at address: 0x7f0aadc24100
+[c7218:02629] *** Process received signal ***
+[c7218:02629] Signal: Segmentation fault (11)
+[c7218:02629] Signal code: Invalid permissions (2)
+[c7218:02629] Failing at address: 0x7ff10ae22054
+[c7333:04806] *** Process received signal ***
+[c6647:29815] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7f9c86e36790]
+[c6647:29815] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c6647:29815] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c6647:29815] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c6647:29815] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7f9c8726902e]
+[c6647:29815] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7f9c86e2ea51]
+[c6647:29815] [ 6] /lib64/libc.so.6(clone+0x6d)[0x7f9c86b7b93d]
+[c6647:29815] *** End of error message ***
+[c7218:02628] *** Process received signal ***
+[c7218:02628] Signal: Segmentation fault (11)
+[c7218:02628] Signal code: Invalid permissions (2)
+[c7218:02628] Failing at address: 0x7f47b8523ac8
+/lib64/libpthread.so.0(+0xf790)[0x7fa82df27790]
+[c7346:17259] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7346:17259] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7346:17259] [ 3] [c7220:07874] *** Process received signal ***
+[c7220:07874] Signal: Segmentation fault (11)
+[c7220:07874] Signal code: Invalid permissions (2)
+[c7220:07874] Failing at address: 0x7f3e7afc3ccc
+/lib64/libpthread.so.0(+0xf790)[0x7f7bae9a5790]
+[c7201:07239] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7201:07239] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7201:07239] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7201:07239] [c7221:03594] *** Process received signal ***
+[c7221:03594] Signal: Segmentation fault (11)
+[c7221:03594] Signal code: Invalid permissions (2)
+[c7221:03594] Failing at address: 0x7f1246c23be4
+[c7345:01806] *** Process received signal ***
+[c7336:16256] *** Process received signal ***
+./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7346:17259] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7fa82e35a02e]
+[c7346:17259] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7fa82df1fa51]
+[c7346:17259] [ 6] [c7220:07875] *** Process received signal ***
+[c7220:07875] Signal: Segmentation fault (11)
+[c7220:07875] Signal code: Invalid permissions (2)
+[c7220:07875] Failing at address: 0x7fa11202358c
+[ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7f7baedd802e]
+[c7201:07239] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7f7bae99da51]
+[c7201:07239] [ 6] [c7334:04674] *** Process received signal ***
+[c7221:03596] *** Process received signal ***
+[c7336:16257] *** Process received signal ***
+[c7336:16257] Signal: Segmentation fault (11)
+[c7336:16257] Signal code: Invalid permissions (2)
+[c7336:16257] Failing at address: 0x7f5e3ba237c4
+/lib64/libc.so.6(clone+0x6d)[0x7fa82dc6c93d]
+[c7346:17259] *** End of error message ***
+[c7220:07876] *** Process received signal ***
+[c7220:07876] Signal: Segmentation fault (11)
+[c7220:07876] Signal code: Invalid permissions (2)
+[c7220:07876] Failing at address: 0x7fbc48a73700
+/lib64/libc.so.6(clone+0x6d)[0x7f7bae6ea93d]
+[c7201:07239] *** End of error message ***
+[c7334:04677] *** Process received signal ***
+[c7221:03599] *** Process received signal ***
+[c7221:03599] Signal: Segmentation fault (11)
+[c7221:03599] Signal code: Invalid permissions (2)
+[c7221:03599] Failing at address: 0x7f2da278a3a0
+[c7345:01808] *** Process received signal ***
+[c7336:16254] *** Process received signal ***
+[c7218:02630] *** Process received signal ***
+[c7346:17247] *** Process received signal ***
+[c7220:07873] *** Process received signal ***
+[c7220:07873] Signal: Segmentation fault (11)
+[c7220:07873] Signal code: Invalid permissions (2)
+[c7220:07873] Failing at address: 0x7fe105524f98
+[c7201:07238] *** Process received signal ***
+[c7221:03602] *** Process received signal ***
+[c7221:03602] Signal: Segmentation fault (11)
+[c7221:03602] Signal code: Invalid permissions (2)
+[c7221:03602] Failing at address: 0x7fc0f1574070
+[c7345:01801] *** Process received signal ***
+[c6647:29808] *** Process received signal ***
+[c6647:29810] *** Process received signal ***
+[c6647:29810] Signal: Segmentation fault (11)
+[c6647:29810] Signal code: Invalid permissions (2)
+[c6647:29810] Failing at address: 0x7f1348d220f4
+[c6647:29814] *** Process received signal ***
+[c6647:29814] Signal: Segmentation fault (11)
+[c6647:29814] Signal code: Invalid permissions (2)
+[c6647:29814] Failing at address: 0x7ff018425f3c
+[c7218:02623] *** Process received signal ***
+[c7346:17247] Signal: Segmentation fault (11)
+[c7346:17247] Signal code: Invalid permissions (2)
+[c7346:17247] Failing at address: 0x7fa8ebb23334
+[c7220:07881] *** Process received signal ***
+[c7220:07881] Signal: Segmentation fault (11)
+[c7220:07881] Signal code: Invalid permissions (2)
+[c7220:07881] Failing at address: 0x7fe92c624968
+[c7221:03593] *** Process received signal ***
+[c7221:03593] Signal: Segmentation fault (11)
+[c7221:03593] Signal code: Invalid permissions (2)
+[c7221:03593] Failing at address: 0x7f4a9217769c
+[c6647:29814] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7ff10c307790]
+[c6647:29814] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c6647:29814] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c6647:29814] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c6647:29814] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7ff10c73a02e]
+[c7218:02623] Signal: Segmentation fault (11)
+[c7218:02623] Signal code: Invalid permissions (2)
+[c7218:02623] Failing at address: 0x7f8db832462c
+[c7346:17248] *** Process received signal ***
+[c7220:07880] *** Process received signal ***
+[c7201:07238] Signal: Segmentation fault (11)
+[c7201:07238] Signal code: Invalid permissions (2)
+[c7201:07238] Failing at address: 0x7f2976c23a48
+[c7221:03592] *** Process received signal ***
+[c7221:03592] Signal: Segmentation fault (11)
+[c7221:03592] Signal code: Invalid permissions (2)
+[c7221:03592] Failing at address: 0x7fe850324310
+[c6647:29814] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7ff10c2ffa51]
+[c6647:29814] [ 6] /lib64/libc.so.6(clone+0x6d)[0x7ff10c04c93d]
+[c6647:29814] *** End of error message ***
+[c7336:16264] *** Process received signal ***
+[c7218:02624] *** Process received signal ***
+[c7346:17254] *** Process received signal ***
+[c7346:17254] Signal: Segmentation fault (11)
+[c7346:17254] Signal code: Invalid permissions (2)
+[c7346:17254] Failing at address: 0x7f0d5db7a6cc
+[c7201:07238] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7f2a6a12c790]
+[c7201:07238] [c7334:04678] *** Process received signal ***
+[c7221:03597] *** Process received signal ***
+[c7336:16260] *** Process received signal ***
+[c7218:02624] Signal: Segmentation fault (11)
+[c7218:02624] Signal code: Invalid permissions (2)
+[c7218:02624] Failing at address: 0x7fa4b3dee36c
+[c7346:17255] *** Process received signal ***
+[c7346:17255] Signal: Segmentation fault (11)
+[c7346:17255] Signal code: Invalid permissions (2)
+[c7346:17255] Failing at address: 0x7fcf01e224b0
+[ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7201:07238] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7201:07238] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7201:07238] [ 4] [c7334:04671] *** Process received signal ***
+[c7221:03590] *** Process received signal ***
+[c7221:03590] Signal: Segmentation fault (11)
+[c7221:03590] Signal code: Invalid permissions (2)
+[c7221:03590] Failing at address: 0x7efbf9024898
+[c7202:08516] *** Process received signal ***
+[c7202:08516] Signal: Segmentation fault (11)
+[c7202:08516] Signal code: Invalid permissions (2)
+[c7202:08516] Failing at address: 0x7fea45a24654
+[c7204:08091] *** Process received signal ***
+[c7336:16255] *** Process received signal ***
+[c7333:04802] *** Process received signal ***
+[c7333:04802] Signal: Segmentation fault (11)
+[c7333:04802] Signal code: Invalid permissions (2)
+[c7333:04802] Failing at address: 0x7f12d8e23f40
+[c7333:04802] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7f13cd26c790]
+[c7333:04802] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7333:04802] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7333:04802] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7333:04802] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7f13cd69f02e]
+[c7333:04802] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7f13cd264a51]
+[c7333:04802] [ 6] /lib64/libc.so.6(clone+0x6d)[0x7f13ccfb193d]
+[c7333:04802] *** End of error message ***
+[c7346:17249] *** Process received signal ***
+[c7346:17249] Signal: Segmentation fault (11)
+[c7346:17249] Signal code: Invalid permissions (2)
+[c7346:17249] Failing at address: 0x7f565ac23114
+/opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7f2a6a55f02e]
+[c7201:07238] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7f2a6a124a51]
+[c7201:07238] [ 6] [c7221:03591] *** Process received signal ***
+[c7221:03591] Signal: Segmentation fault (11)
+[c7221:03591] Signal code: Invalid permissions (2)
+[c7221:03591] Failing at address: 0x7fd16d2c7dd0
+[c7202:08519] *** Process received signal ***
+[c7202:08519] Signal: Segmentation fault (11)
+[c7202:08519] Signal code: Invalid permissions (2)
+[c7202:08519] Failing at address: 0x7f770ac25f54
+[c7204:08098] *** Process received signal ***
+[c7204:08098] Signal: Segmentation fault (11)
+[c7204:08098] Signal code: Invalid permissions (2)
+[c7204:08098] Failing at address: 0x7f077a922628
+[c7333:04798] *** Process received signal ***
+[c7346:17255] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7fcff6c70790]
+[c7346:17255] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7346:17255] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7346:17255] [ 3] /lib64/libc.so.6(clone+0x6d)[0x7f2a69e7193d]
+[c7201:07238] *** End of error message ***
+[c7202:08523] *** Process received signal ***
+[c7202:08523] Signal: Segmentation fault (11)
+[c7202:08523] Signal code: Invalid permissions (2)
+[c7202:08523] Failing at address: 0x7f201262193c
+[c7204:08094] *** Process received signal ***
+[c7204:08094] Signal: Segmentation fault (11)
+[c7204:08094] Signal code: Invalid permissions (2)
+[c7204:08094] Failing at address: 0x7ffa345233a0
+[c7333:04799] *** Process received signal ***
+[c7333:04799] Signal: Segmentation fault (11)
+[c7333:04799] Signal code: Invalid permissions (2)
+[c7333:04799] Failing at address: 0x7f9be5c22eb0
+./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7346:17255] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7fcff70a302e]
+[c7346:17255] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7fcff6c68a51]
+[c7346:17255] [ 6] [c7201:07245] *** Process received signal ***
+[c7333:04800] *** Process received signal ***
+/lib64/libc.so.6(clone+0x6d)[0x7fcff69b593d]
+[c7346:17255] *** End of error message ***
+[c7201:07241] *** Process received signal ***
+[c7345:01810] *** Process received signal ***
+[c7345:01810] Signal: Segmentation fault (11)
+[c7345:01810] Signal code: Invalid permissions (2)
+[c7345:01810] Failing at address: 0x7fd9027218a0
+[c7346:17250] *** Process received signal ***
+[c7346:17250] Signal: Segmentation fault (11)
+[c7346:17250] Signal code: Invalid permissions (2)
+[c7346:17250] Failing at address: 0x7faf46723818
+[c7201:07249] *** Process received signal ***
+[c7334:04680] *** Process received signal ***
+[c7345:01805] *** Process received signal ***
+[c7204:08097] *** Process received signal ***
+[c7218:02632] *** Process received signal ***
+[c7218:02632] Signal: Segmentation fault (11)
+[c7218:02632] Signal code: Invalid permissions (2)
+[c7218:02632] Failing at address: 0x7f0fdef30d0c
+[c7346:17250] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7fb03b6f3790]
+[c7201:07248] *** Process received signal ***
+[c7201:07248] Signal: Segmentation fault (11)
+[c7201:07248] Signal code: Invalid permissions (2)
+[c7201:07248] Failing at address: 0x7f77502245c8
+[c7346:17250] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7346:17250] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7346:17250] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7346:17250] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7fb03bb2602e]
+[c7346:17250] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7fb03b6eba51]
+[c7346:17250] [ 6] [c7201:07248] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7f78438da790]
+[c7201:07248] [ 1] /lib64/libc.so.6(clone+0x6d)[0x7fb03b43893d]
+[c7346:17250] *** End of error message ***
+./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7201:07248] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7201:07248] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7201:07248] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7f7843d0d02e]
+[c7201:07248] [ 5] [c7202:08515] *** Process received signal ***
+[c7202:08515] Signal: Segmentation fault (11)
+[c7202:08515] Signal code: Invalid permissions (2)
+[c7202:08515] Failing at address: 0x7fa111d24d34
+[c7220:07872] *** Process received signal ***
+[c7220:07872] Signal: Segmentation fault (11)
+[c7220:07872] Signal code: Invalid permissions (2)
+[c7220:07872] Failing at address: 0x7f3bb392432c
+/lib64/libpthread.so.0(+0x7a51)[0x7f78438d2a51]
+[c7201:07248] [ 6] [c7202:08520] *** Process received signal ***
+[c7202:08520] Signal: Segmentation fault (11)
+[c7202:08520] Signal code: Invalid permissions (2)
+[c7202:08520] Failing at address: 0x7fc0fbe8fe58
+[c7202:08521] *** Process received signal ***
+/lib64/libc.so.6(clone+0x6d)[0x7f784361f93d]
+[c7201:07248] *** End of error message ***
+[c7201:07246] *** Process received signal ***
+[c7201:07251] *** Process received signal ***
+[c7201:07251] Signal: Segmentation fault (11)
+[c7201:07251] Signal code: Invalid permissions (2)
+[c7201:07251] Failing at address: 0x7fc422b23d10
+[c7346:17251] *** Process received signal ***
+[c7346:17251] Signal: Segmentation fault (11)
+[c7346:17251] Signal code: Invalid permissions (2)
+[c7346:17251] Failing at address: 0x7fe4e1d72608
+[c7346:17252] [ 0] /lib64/libpthread.so.0(+0xf790)[0x7f4855348790]
+[c7346:17252] [ 1] ./../../ParallelMPI/fast-mrmr[0x40d9a4]
+[c7346:17252] [ 2] ./../../ParallelMPI/fast-mrmr[0x40de1a]
+[c7346:17252] [ 3] ./../../ParallelMPI/fast-mrmr[0x40a4d3]
+[c7346:17252] [ 4] /opt/cesga/gcc/5.3.0/lib64/libgomp.so.1(+0xf02e)[0x7f485577b02e]
+[c7346:17252] [ 5] /lib64/libpthread.so.0(+0x7a51)[0x7f4855340a51]
+[c7346:17252] [ 6] /lib64/libc.so.6(clone+0x6d)[0x7f485508d93d]
+[c7346:17252] *** End of error message ***
+[c7204:08092] *** Process received signal ***
+[c7204:08093] *** Process received signal ***
+[c7202:08517] *** Process received signal ***
+[c7202:08522] *** Process received signal ***
+[c7202:08522] Signal: Segmentation fault (11)
+[c7202:08522] Signal code: Invalid permissions (2)
+[c7202:08522] Failing at address: 0x7f301a8248b0
+[c7334:04675] *** Process received signal ***
+[c7334:04675] Signal: Segmentation fault (11)
+[c7334:04675] Signal code: Invalid permissions (2)
+[c7334:04675] Failing at address: 0x7f057a173cc8
+[c7202:08512] *** Process received signal ***
+[c7204:08096] *** Process received signal ***
+[c7204:08096] Signal: Segmentation fault (11)
+[c7204:08096] Signal code: Invalid permissions (2)
+[c7204:08096] Failing at address: 0x7f15e2a8a4dc
+[c7204:08095] *** Process received signal ***
+[c7204:08095] Signal: Segmentation fault (11)
+[c7204:08095] Signal code: Invalid permissions (2)
+[c7204:08095] Failing at address: 0x7f87ef32219c
+[c6647:29818] *** Process received signal ***
+[c7202:08518] *** Process received signal ***
+[c7334:04676] *** Process received signal ***
+[c7204:08102] *** Process received signal ***
+[c7204:08102] Signal: Segmentation fault (11)
+[c7204:08102] Signal code: Invalid permissions (2)
+[c7204:08102] Failing at address: 0x7ff0d7b22e94
+[c7204:08099] *** Process received signal ***
+[c7204:08099] Signal: Segmentation fault (11)
+[c7204:08099] Signal code: Invalid permissions (2)
+[c7204:08099] Failing at address: 0x7fb85cc27b3c
+[c7205:06366] *** Process received signal ***
+[c7205:06366] Signal: Segmentation fault (11)
+[c7205:06366] Signal code: Invalid permissions (2)
+[c7205:06366] Failing at address: 0x7f0632d22998
+[c7221:03595] *** Process received signal ***
+[c7221:03595] Signal: Segmentation fault (11)
+[c7221:03595] Signal code: Invalid permissions (2)
+[c7221:03595] Failing at address: 0x7f23381c5748
+[c7205:06370] *** Process received signal ***
+[c7205:06370] Signal: Segmentation fault (11)
+[c7205:06370] Signal code: Address not mapped (1)
+[c7205:06370] Failing at address: 0x7f247a805cbc
+[c7215:02115] *** Process received signal ***
+[c7205:06371] *** Process received signal ***
+[c7205:06371] Signal: Segmentation fault (11)
+[c7205:06371] Signal code: Invalid permissions (2)
+[c7205:06371] Failing at address: 0x7f44f8223284
+[c7205:06367] *** Process received signal ***
+[c7205:06367] Signal: Segmentation fault (11)
+[c7205:06367] Signal code: Invalid permissions (2)
+[c7205:06367] Failing at address: 0x7f5588d22964
+[c7215:02114] *** Process received signal ***
+[c7207:05250] *** Process received signal ***
+[c7207:05255] *** Process received signal ***
+[c7207:05255] Signal: Segmentation fault (11)
+[c7207:05255] Signal code: Invalid permissions (2)
+[c7207:05255] Failing at address: 0x7f5814121874
+[c7207:05260] *** Process received signal ***
+[c7207:05260] Signal: Segmentation fault (11)
+[c7207:05260] Signal code: Invalid permissions (2)
+[c7207:05260] Failing at address: 0x7ff2a5d22944
+[c7205:06364] *** Process received signal ***
+[c7205:06364] Signal: Segmentation fault (11)
+[c7205:06364] Signal code: Invalid permissions (2)
+[c7205:06364] Failing at address: 0x7f0aa8473658
+[c7205:06374] *** Process received signal ***
+[c7205:06374] Signal: Segmentation fault (11)
+[c7205:06374] Signal code: Invalid permissions (2)
+[c7205:06374] Failing at address: 0x7f1dd0a24afc
+[c7207:05252] *** Process received signal ***
+[c7207:05253] *** Process received signal ***
+[c7207:05253] Signal: Segmentation fault (11)
+[c7207:05253] Signal code: Invalid permissions (2)
+[c7207:05253] Failing at address: 0x7fa15798c380
+[c7205:06377] *** Process received signal ***
+[c7205:06368] *** Process received signal ***
+[c7207:05248] *** Process received signal ***
+[c7205:06365] *** Process received signal ***
+[c7207:05258] *** Process received signal ***
+[c7207:05259] *** Process received signal ***
+[c7207:05254] *** Process received signal ***
+[c7207:05254] Signal: Segmentation fault (11)
+[c7207:05254] Signal code: Invalid permissions (2)
+[c7207:05254] Failing at address: 0x7f8d579226dc
+[c7205:06369] *** Process received signal ***
+[c7205:06369] Signal: Segmentation fault (11)
+[c7205:06369] Signal code: Invalid permissions (2)
+[c7205:06369] Failing at address: 0x7fa956e251f8
+[c7205:06372] *** Process received signal ***
+[c7205:06372] Signal: Segmentation fault (11)
+[c7205:06372] Signal code: Invalid permissions (2)
+[c7205:06372] Failing at address: 0x7f52c0edd4a0
+[c7207:05249] *** Process received signal ***
+[c7207:05249] Signal: Segmentation fault (11)
+[c7207:05249] Signal code: Invalid permissions (2)
+[c7207:05249] Failing at address: 0x7fd0bdc24a50
+[c7204:08101] *** Process received signal ***
+[c7205:06376] *** Process received signal ***
+[c6647:29770] [[3963,0],0]->[[3963,0],1] mca_oob_tcp_msg_send_bytes: write failed: Broken pipe (32) [sd = 22]
+[c6647:29770] [[3963,0],0]-[[3963,0],1] mca_oob_tcp_peer_send_handler: unable to send header

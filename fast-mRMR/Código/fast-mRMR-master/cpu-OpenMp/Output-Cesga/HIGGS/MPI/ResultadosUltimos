@@ -1,0 +1,624 @@
+Si fallo aqui si
+Inicio en 0 leo 632
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 30513 on node c7146 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+Si fallo aqui si
+Inicio en 0 leo 632
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 30724 on node c7146 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+Si fallo aqui si
+Inicio en 0 leo 632
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 30802 on node c7146 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+Si fallo aqui si
+Si fallo aqui si
+Inicio en 0 leo 316
+Inicio en 316 leo 316
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 30872 on node c7146 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+Si fallo aqui si
+Si fallo aqui si
+Inicio en 316 leo 316
+Inicio en 0 leo 316
+VectInteres 255 1
+Rawdata values 256
+Rawdata values 256
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 30928 on node c7146 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+Si fallo aqui si
+Si fallo aqui si
+Inicio en 0 leo 316
+Inicio en 316 leo 316
+VectInteres 255 1
+Rawdata values 256
+Rawdata values 256
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 31004 on node c7146 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+Si fallo aqui si
+Inicio en 316 leo 158
+Si fallo aqui si
+Inicio en 474 leo 158
+Si fallo aqui si
+Inicio en 0 leo 158
+Si fallo aqui si
+Inicio en 158 leo 158
+VectInteres 255 1
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Tiempos medidos: tiempoRelevance: 1347.229004, tiempoMrmr 75314.048052
+Tiempos totales medidos: 398934.983969
+
+
+1,130,21,2,129,497,27,23,120,161,114,25,5,124,163,127,26,18,35,166,111,13,117,6,165,32,22,121,493,36,167,126,4,122,19,37,113,170,118,328,29,162,125,20,30,128,164,112,15,
+
+Si fallo aqui si
+Inicio en 474 leo 158
+Si fallo aqui si
+Inicio en 0 leo 158
+Si fallo aqui si
+Inicio en 158 leo 158
+Si fallo aqui si
+Inicio en 316 leo 158
+VectInteres 255 1
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+--------------------------------------------------------------------------
+mpirun noticed that process rank 2 with PID 31117 on node c7146 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+Si fallo aqui si
+Inicio en 0 leo 158
+Si fallo aqui si
+Inicio en 158 leo 158
+Si fallo aqui si
+Inicio en 316 leo 158
+Si fallo aqui si
+Inicio en 474 leo 158
+VectInteres 255 1
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 31172 on node c7146 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+Si fallo aqui si
+Inicio en 0 leo 106
+Si fallo aqui si
+Inicio en 106 leo 106
+Si fallo aqui si
+Inicio en 212 leo 105
+Si fallo aqui si
+Inicio en 317 leo 105
+Si fallo aqui si
+Inicio en 422 leo 105
+Si fallo aqui si
+Inicio en 527 leo 105
+VectInteres 255 1
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Tiempos medidos: tiempoRelevance: 1187.122107, tiempoMrmr 67440.836906
+Tiempos totales medidos: 260126.163006
+
+
+130,27,120,114,30,117,129,29,26,127,35,23,25,37,121,122,32,124,36,118,111,34,113,126,38,125,24,112,31,28,116,123,22,128,119,21,115,33,543,563,583,603,623,539,559,573,613,593,535,
+
+
+
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Inicio en 317 leo 105
+Inicio en 527 leo 105
+Inicio en 0 leo 106
+Inicio en 106 leo 106
+Inicio en 212 leo 105
+Inicio en 422 leo 105
+VectInteres 255 1
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Tiempos medidos: tiempoRelevance: 1220.088005, tiempoMrmr 141341.161966
+Tiempos totales medidos: 336089.360952
+
+
+130,27,120,114,30,117,129,29,26,127,35,23,25,37,121,122,32,124,36,118,111,34,113,126,38,125,24,112,31,28,116,123,22,128,119,21,115,33,543,563,583,603,623,539,559,573,613,593,535,131,555,2,631,595,615,575,546,1,56,39,566,579,619,599,466,486,549,78,135,141,423,589,283,506,569,383,629,223,609,363,403,303,343,16,611,203,571,323,591,446,553,483,7,463,243,547,511,351,263,
+
+
+
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Inicio en 527 leo 105
+Inicio en 0 leo 106
+Inicio en 106 leo 106
+Inicio en 212 leo 105
+Inicio en 317 leo 105
+Inicio en 422 leo 105
+VectInteres 255 1
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Tiempos medidos: tiempoRelevance: 1200.873852, tiempoMrmr 282660.614967
+Tiempos totales medidos: 485846.595049
+
+130,27,120,114,30,117,129,29,26,127,35,23,25,37,121,122,32,124,36,118,111,34,113,126,38,125,24,112,31,28,116,123,22,128,119,21,115,33,543,563,583,603,623,539,559,573,613,593,535,131,555,2,631,595,615,575,546,1,56,39,566,579,619,599,466,486,549,78,135,141,423,589,283,506,569,383,629,223,609,363,403,303,343,16,611,203,571,323,591,446,553,483,7,463,243,547,511,351,263,503,183,548,386,587,406,627,346,551,606,426,191,132,326,306,523,533,211,568,443,630,44,610,48,584,20,171,11,251,570,616,375,586,52,550,271,608,3,12,415,231,531,471,628,47,567,155,596,451,395,590,491,355,213,626,86,544,206,556,311,526,607,335,576,435,134,43,536,295,366,564,371,604,411,624,81,588,455,186,54,286,49,246,391,331,168,9,315,142,499,14,618,255,431,475,578,40,538,459,598,
+
+
+
+
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Inicio en 580 leo 52
+Inicio en 53 leo 53
+Inicio en 106 leo 53
+Inicio en 159 leo 53
+Inicio en 212 leo 53
+Inicio en 265 leo 53
+Inicio en 318 leo 53
+Inicio en 371 leo 53
+Inicio en 424 leo 52
+Inicio en 476 leo 52
+Inicio en 528 leo 52
+Inicio en 0 leo 53
+VectInteres 255 1
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Tiempos medidos: tiempoRelevance: 1203.243017, tiempoMrmr 68254.141092
+Tiempos totales medidos: 291626.106977
+
+
+
+130,27,120,114,30,117,129,29,26,127,35,23,25,37,121,122,32,124,36,118,111,34,113,126,38,125,24,112,31,28,116,123,22,128,119,21,115,33,543,563,583,603,623,539,559,573,613,593,535,
+
+
+
+
+
+
+
+
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Inicio en 0 leo 53
+Inicio en 53 leo 53
+Inicio en 106 leo 53
+Inicio en 159 leo 53
+Inicio en 212 leo 53
+Inicio en 265 leo 53
+Inicio en 318 leo 53
+Inicio en 371 leo 53
+Inicio en 424 leo 52
+Inicio en 476 leo 52
+Inicio en 528 leo 52
+Inicio en 580 leo 52
+VectInteres 255 1
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Tiempos medidos: tiempoRelevance: 1183.624983, tiempoMrmr 143448.723078
+Tiempos totales medidos: 368470.551014
+
+
+
+
+130,27,120,114,30,117,129,29,26,127,35,23,25,37,121,122,32,124,36,118,111,34,113,126,38,125,24,112,31,28,116,123,22,128,119,21,115,33,543,563,583,603,623,539,559,573,613,593,535,131,555,2,631,595,615,575,546,1,56,39,566,579,619,599,466,486,549,78,135,141,423,589,283,506,569,383,629,223,609,363,403,303,343,16,611,203,571,323,591,446,553,483,7,463,243,547,511,351,263,
+
+
+
+
+
+
+
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Inicio en 528 leo 52
+Inicio en 580 leo 52
+Inicio en 0 leo 53
+Inicio en 53 leo 53
+Inicio en 106 leo 53
+Inicio en 212 leo 53
+Inicio en 265 leo 53
+Inicio en 318 leo 53
+Inicio en 424 leo 52
+Inicio en 476 leo 52
+Si fallo aqui si
+Si fallo aqui si
+Inicio en 371 leo 53
+Inicio en 159 leo 53
+VectInteres 255 1
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Tiempos medidos: tiempoRelevance: 1184.628010, tiempoMrmr 289110.168934
+Tiempos totales medidos: 513756.322145
+
+
+
+130,27,120,114,30,117,129,29,26,127,35,23,25,37,121,122,32,124,36,118,111,34,113,126,38,125,24,112,31,28,116,123,22,128,119,21,115,33,543,563,583,603,623,539,559,573,613,593,535,131,555,2,631,595,615,575,546,1,56,39,566,579,619,599,466,486,549,78,135,141,423,589,283,506,569,383,629,223,609,363,403,303,343,16,611,203,571,323,591,446,553,483,7,463,243,547,511,351,263,503,183,548,386,587,406,627,346,551,606,426,191,132,326,306,523,533,211,568,443,630,44,610,48,584,20,171,11,251,570,616,375,586,52,550,271,608,3,12,415,231,531,471,628,47,567,155,596,451,395,590,491,355,213,626,86,544,206,556,311,526,607,335,576,435,134,43,536,295,366,564,371,604,411,624,81,588,455,186,54,286,49,246,391,331,168,9,315,142,499,14,618,255,431,475,578,40,538,459,598,
+
+
+
+
+
+
+
+
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Inicio en 162 leo 27
+Inicio en 54 leo 27
+Inicio en 108 leo 27
+Inicio en 216 leo 26
+Inicio en 268 leo 26
+Inicio en 372 leo 26
+Inicio en 476 leo 26
+Inicio en 320 leo 26
+Inicio en 0 leo 27
+Inicio en 27 leo 27
+Inicio en 135 leo 27
+Inicio en 189 leo 27
+Inicio en 294 leo 26
+Inicio en 346 leo 26
+Inicio en 398 leo 26
+Inicio en 450 leo 26
+Inicio en 502 leo 26
+Inicio en 554 leo 26
+Inicio en 81 leo 27
+Inicio en 580 leo 26
+Si fallo aqui si
+Inicio en 242 leo 26
+Si fallo aqui si
+Si fallo aqui si
+Inicio en 606 leo 26
+Si fallo aqui si
+Inicio en 424 leo 26
+Inicio en 528 leo 26
+VectInteres 255 1
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Tiempos medidos: tiempoRelevance: 1205.502987, tiempoMrmr 79137.639046
+Tiempos totales medidos: 404291.369200
+
+
+
+
+
+
+
+
+
+
+
+130,27,120,114,30,117,129,29,26,127,35,23,25,37,121,122,32,124,36,118,111,34,113,126,38,125,24,112,31,27,28,116,123,27,22,128,119,21,27,115,27,33,27,27,27,27,27,27,27,
+
+
+
+
+
+
+
+
+
+
+
+
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Inicio en 450 leo 26
+Inicio en 476 leo 26
+Inicio en 502 leo 26
+Si fallo aqui si
+Inicio en 528 leo 26
+Inicio en 580 leo 26
+Inicio en 346 leo 26
+Inicio en 0 leo 27
+Inicio en 54 leo 27
+Inicio en 162 leo 27
+Inicio en 216 leo 26
+Inicio en 268 leo 26
+Inicio en 294 leo 26
+Inicio en 372 leo 26
+Inicio en 398 leo 26
+Inicio en 424 leo 26
+Inicio en 606 leo 26
+Inicio en 27 leo 27
+Inicio en 81 leo 27
+Inicio en 135 leo 27
+Inicio en 189 leo 27
+Inicio en 242 leo 26
+Inicio en 554 leo 26
+Si fallo aqui si
+Inicio en 108 leo 27
+Si fallo aqui si
+Inicio en 320 leo 26
+VectInteres 255 1
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Tiempos medidos: tiempoRelevance: 1208.628893, tiempoMrmr 140626.914978
+Tiempos totales medidos: 467343.289852
+
+
+
+
+
+
+130,27,120,114,30,117,129,29,26,127,35,23,25,37,121,122,32,124,36,118,111,34,113,126,38,125,24,112,31,27,28,116,123,27,22,128,119,21,27,115,27,33,27,27,27,27,27,27,27,548,27,563,583,27,603,623,539,27,559,579,27,613,593,27,543,555,131,27,2,575,27,595,615,27,546,631,535,27,573,566,27,619,599,27,39,56,568,27,1,589,27,629,141,27,609,135,466,27,611,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Si fallo aqui si
+Inicio en 606 leo 26
+Inicio en 0 leo 27
+Inicio en 27 leo 27
+Inicio en 54 leo 27
+Inicio en 81 leo 27
+Inicio en 108 leo 27
+Si fallo aqui si
+Inicio en 135 leo 27
+Inicio en 189 leo 27
+Inicio en 216 leo 26
+Inicio en 242 leo 26
+Inicio en 268 leo 26
+Inicio en 320 leo 26
+Inicio en 346 leo 26
+Inicio en 372 leo 26
+Inicio en 398 leo 26
+Inicio en 424 leo 26
+Inicio en 450 leo 26
+Inicio en 476 leo 26
+Inicio en 502 leo 26
+Inicio en 528 leo 26
+Inicio en 554 leo 26
+Inicio en 580 leo 26
+Inicio en 162 leo 27
+Si fallo aqui si
+Inicio en 294 leo 26
+VectInteres 255 1
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Rawdata values 256
+Tiempos medidos: tiempoRelevance: 1211.063862, tiempoMrmr 295310.599089
+Tiempos totales medidos: 620764.638186
+
+
+
+
+
+130,27,120,114,30,117,129,29,26,127,35,23,25,37,121,122,32,124,36,118,111,34,113,126,38,125,24,112,31,27,28,116,123,27,22,128,119,21,27,115,27,33,27,27,27,27,27,27,27,548,27,563,583,27,603,623,539,27,559,579,27,613,593,27,543,555,131,27,2,575,27,595,615,27,546,631,535,27,573,566,27,619,599,27,39,56,568,27,1,589,27,629,141,27,609,135,466,27,611,587,27,486,77,27,591,553,423,27,547,506,27,243,383,27,283,363,403,27,569,549,27,16,627,323,27,571,607,27,303,343,27,203,7,533,27,567,511,27,628,446,27,608,132,483,27,580,463,27,223,351,27,616,43,503,27,610,550,27,570,588,386,27,183,406,27,630,596,27,426,231,551,27,586,20,27,531,346,27,326,443,191,27,544,263,27,626,306,27,556,606,3,27,523,576,27,286,564,27,12,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

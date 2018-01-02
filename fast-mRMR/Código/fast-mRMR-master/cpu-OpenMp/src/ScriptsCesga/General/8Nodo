@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH -N 8
+#SBATCH -n 96
+#SBATCH --ntasks-per-node=12
+#SBATCH -c 2
+#SBATCH -t 1:00:00
+#SBATCH -p thinnodes
+module load gcc boost openmpi
+cd $1
+make clean -f $5
+make -f $5
+cd $6 
+export OMP_NUM_THREADS=2
+mpirun -np 96 $4 -a 50 -f $2 >> $3
+mpirun -np 96 $4 -a 100 -f $2 >> $3
+mpirun -np 96 $4 -a 200 -f $2 >> $3

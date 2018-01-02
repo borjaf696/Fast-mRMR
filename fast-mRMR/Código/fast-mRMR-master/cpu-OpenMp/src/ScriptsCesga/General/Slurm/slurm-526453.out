@@ -1,0 +1,67 @@
+gcc/5.3.0 loaded
+boost/1.61.0 loaded
+openmpi/1.10.2 loaded
+rm *.o
+rm ../../plibOp3/*.o
+rm fast-mrmr
+clear
+[3J[H[2Jmpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp mainOpenMpMPI-V1-Block-Funcional0.3.cpp -o mainOpenMpMPI-V1-Block-Funcional0.3.o
+mainOpenMpMPI-V1-Block-Funcional0.3.cpp: In function ‘int main(int, char**)’:
+mainOpenMpMPI-V1-Block-Funcional0.3.cpp:170:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (uint i = 0; i < dataSizes; i++)
+                            ^
+mainOpenMpMPI-V1-Block-Funcional0.3.cpp:187:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int j = dataSizes+1; j < (dataSizes+1+sizeof(double)*vectInteres2[dataSizes]); j+=8) {
+                                 ^
+mainOpenMpMPI-V1-Block-Funcional0.3.cpp:233:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if ((lastFeatureIndex > startPoint) & (lastFeatureIndex < (startPoint+sizePerProcess)))
+                           ^
+mainOpenMpMPI-V1-Block-Funcional0.3.cpp:246:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (uint i = 0; i < dataSizes; i++)
+                            ^
+mainOpenMpMPI-V1-Block-Funcional0.3.cpp:263:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int j = dataSizes+1; j < (dataSizes+1+sizeof(double)*vectInteres2[dataSizes]); j+=8) {
+                                 ^
+mainOpenMpMPI-V1-Block-Funcional0.3.cpp:331:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         if ((lastFeatureIndex > startPoint) & (lastFeatureIndex < (startPoint+sizePerProcess)))
+                               ^
+mainOpenMpMPI-V1-Block-Funcional0.3.cpp:347:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (uint i = 0; i < dataSizes; i++)
+                                ^
+mainOpenMpMPI-V1-Block-Funcional0.3.cpp:364:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j = dataSizes+1; j < (dataSizes+1+sizeof(double)*vectInteres2[dataSizes]); j+=8) {
+                                     ^
+mainOpenMpMPI-V1-Block-Funcional0.3.cpp:307:9: warning: unused variable ‘timeBucle’ [-Wunused-variable]
+  double timeBucle = timeLoop.stop();
+         ^
+mainOpenMpMPI-V1-Block-Funcional0.3.cpp:333:9: warning: unused variable ‘timeInu’ [-Wunused-variable]
+  double timeInu = tiempoInu.stop();
+         ^
+mainOpenMpMPI-V1-Block-Funcional0.3.cpp:370:9: warning: unused variable ‘timeEnviosF’ [-Wunused-variable]
+  double timeEnviosF = timeEnvios.stop();
+         ^
+mainOpenMpMPI-V1-Block-Funcional0.3.cpp:202:9: warning: unused variable ‘iterator’ [-Wunused-variable]
+     int iterator = 0;
+         ^
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp3/Histogram.cpp -o ../../plibOp3/Histogram.o
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp3/JointProb.cpp -o ../../plibOp3/JointProb.o
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp3/MutualInfo.cpp -o ../../plibOp3/MutualInfo.o
+../../plibOp3/MutualInfo.cpp: In member function ‘double MutualInfo::get(uint, uint)’:
+../../plibOp3/MutualInfo.cpp:40:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int z = 0; z < rawData.getDataSize(); ++z)
+                    ^
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp3/ProbTable.cpp -o ../../plibOp3/ProbTable.o
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp3/RawData.cpp -o ../../plibOp3/RawData.o
+../../plibOp3/RawData.cpp: In member function ‘void RawData::loadData()’:
+../../plibOp3/RawData.cpp:107:9: warning: unused variable ‘tiempoGas’ [-Wunused-variable]
+  double tiempoGas = tiempo1.stop();
+         ^
+../../plibOp3/RawData.cpp: In member function ‘void RawData::calculateVR()’:
+../../plibOp3/RawData.cpp:147:9: warning: unused variable ‘tiempoGas’ [-Wunused-variable]
+  double tiempoGas = tiempo2.stop();
+         ^
+mpicxx mainOpenMpMPI-V1-Block-Funcional0.3.o ../../plibOp3/Histogram.o ../../plibOp3/JointProb.o ../../plibOp3/MutualInfo.o ../../plibOp3/ProbTable.o ../../plibOp3/RawData.o  -lboost_thread -L/usr/lib64/ -lboost_thread -fopenmp -o fast-mrmr
+[c7305:05705] 95 more processes have sent help message help-mpi-errors.txt / mpi_errors_are_fatal
+[c7305:05705] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[c7305:05787] 94 more processes have sent help message help-mpi-errors.txt / mpi_errors_are_fatal
+[c7305:05787] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
