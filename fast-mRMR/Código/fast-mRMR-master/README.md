@@ -19,6 +19,8 @@ Here, we include several implementations for different platforms, in order to ea
 1. **Sequential version**: we provide a basic implementation in C++ for CPU processing. This is designed to be executed in a single machine. This version includes all aforementioned optimizations.
 2. **CUDA implementation**: we also provide a GPU implementation (using CUDA) with the aim of speeding up the previous version through GPU's thread-parallelism. 
 3. **Apache Spark**: a Apache Spark's implementation of the algorithm is also included for large-scale problems, which require a distributed processing in order to obtain efficient solutions.
+4. **OpenMP**: an OpenMp's implementation of the algorithm.
+5. **MPI**: an Message Passing Interface implementation of the algorithm.
 
 Please, for further information refer to our wiki: https://github.com/sramirez/fast-mRMR/wiki
 
@@ -26,10 +28,10 @@ Please, for further information refer to our wiki: https://github.com/sramirez/f
 
 The code is organized as follows:
 
-* _cpu_: C++ code for CPU ([+info](https://github.com/sramirez/fast-mRMR/wiki/CPU-version)).
-* _gpu_: CUDA code for GPU implementation ([+info](https://github.com/sramirez/fast-mRMR/wiki/GPU-version)).
-* _spark_: Scala code for distributed processing in Apache Spark platform ([+info](https://github.com/sramirez/fast-mRMR/wiki/Spark-version)).
-* _utils_: this folder contains a data reader program that transforms data in CSV format to the format required by fast-mRMR algorithm (in binary and columnar-wise format) ([+info](https://github.com/sramirez/fast-mRMR/wiki/Data-Reader)). It also includes a data generator method in case we want to generate synthetic data specifying the structure of this data.
+* _cpu_: C++ code for CPU .
+* _gpu_: CUDA code for GPU implementation .
+* _spark_: Scala code for distributed processing in Apache Spark platform .
+* _utils_: this folder contains a data reader program that transforms data in CSV format to the format required by fast-mRMR algorithm (in binary and columnar-wise format). It also includes a data generator method in case we want to generate synthetic data specifying the structure of this data.
 * _examples_: a folder with examples for all versions implemented.   
 
  
@@ -41,8 +43,4 @@ Licensed to the Apache Software Foundation (ASF) under one or more contributor l
 http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-## References
-
-[1] _"Feature selection based on mutual information: criteria of max-dependency, max-relevance, and min-redundancy,"_ Hanchuan Peng, Fuhui Long, and Chris Ding IEEE Transactions on Pattern Analysis and Machine Intelligence, Vol. 27, No. 8, pp.1226-1238, 2005.
 
