@@ -20,7 +20,6 @@ Here, we include several implementations for different platforms, in order to ea
 2. **OpenMP**: an OpenMp's implementation of the algorithm.
 3. **MPI**: an Message Passing Interface implementation of the algorithm.
 
-Please, for further information refer to our wiki: https://github.com/sramirez/fast-mRMR/wiki
 
 ## Project structure
 
