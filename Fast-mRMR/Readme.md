@@ -12,6 +12,11 @@ Several optimizations have been introduced in this improved version in order to 
 
 - **Data access pattern**: The access pattern of mRMR to the dataset is thought to be feature-wise, in contrast to many other ML (machine learning) algorithms, in which access pattern is row-wise. Although being a low-level technical nuance, this aspect can significantly degrade mRMR performance since random access has a much greater cost than block-wise access. This is specially important in the case of GPU, since data has to be transferred from CPU memory to GPU global memory. Here, we reorganize the way in which data is stored in memory, changing it to a columnar format.
 
+Fast-mRMR MPI version:
+
+- **MPI**: MPI approach allows fast-mRMR to be applied over big data datasets in multi-cluster systems.
+- **OpenMP**: OpenMP approach allows fast-mRMR to be applied by people or research groups with low resources and obtaining high performance.
+
 ## Implementations
 
 Here, we include several implementations for different platforms, in order to ease the application of our proposal. These are: 
