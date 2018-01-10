@@ -1,0 +1,19 @@
+gcc/5.3.0 loaded
+boost/1.61.0 loaded
+openmpi/1.10.2 loaded
+make: ../../ParallelMPI/Makefile3: No such file or directory
+make: *** No rule to make target '../../ParallelMPI/Makefile3'.  Stop.
+make: ../../ParallelMPI/Makefile3: No such file or directory
+make: *** No rule to make target '../../ParallelMPI/Makefile3'.  Stop.
+mpirun: Error: unknown option "-a"
+Type 'mpirun --help' for usage.
+mpirun: Error: unknown option "-a"
+Type 'mpirun --help' for usage.
+mpirun: Error: unknown option "-a"
+Type 'mpirun --help' for usage.
+mpirun: Error: unknown option "-a"
+Type 'mpirun --help' for usage.
+mpirun: Error: unknown option "-a"
+Type 'mpirun --help' for usage.
+mpirun: Error: unknown option "-a"
+Type 'mpirun --help' for usage.

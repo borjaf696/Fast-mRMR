@@ -1,0 +1,161 @@
+gcc/5.3.0 loaded
+boost/1.61.0 loaded
+openmpi/1.10.2 loaded
+rm *.o
+rm ../../plibOp2/*.o
+rm: no se puede borrar '../../plibOp2/*.o': No existe el fichero o el directorio
+Makefile:39: fallo en las instrucciones para el objetivo 'clean'
+make: *** [clean] Error 1
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp mainOpenMpMPI-V1-Block-Funcional-Real-0.3.cpp -o mainOpenMpMPI-V1-Block-Funcional-Real-0.3.o
+mainOpenMpMPI-V1-Block-Funcional-Real-0.3.cpp: En la función ‘int main(int, char**)’:
+mainOpenMpMPI-V1-Block-Funcional-Real-0.3.cpp:268:27: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+     if ((lastFeatureIndex > startPoint) & (lastFeatureIndex < (startPoint+rawData2.getFeaturesSize())))
+                           ^
+mainOpenMpMPI-V1-Block-Funcional-Real-0.3.cpp:352:31: aviso: comparación entre expresiones enteras signed y unsigned [-Wsign-compare]
+         if ((lastFeatureIndex > startPoint) & (lastFeatureIndex < (startPoint+rawData2.getFeaturesSize())))
+                               ^
+mainOpenMpMPI-V1-Block-Funcional-Real-0.3.cpp:117:10: aviso: variable ‘sizePerProcess’ sin usar [-Wunused-variable]
+     uint sizePerProcess = 0, sizePerProcessGlobal = 0;
+          ^
+mainOpenMpMPI-V1-Block-Funcional-Real-0.3.cpp:255:42: aviso: puede ser que se utilice ‘vectorInteres’ sin inicializar en esta función [-Wmaybe-uninitialized]
+         newFeatureIndex = vectorInteres[0];
+                                          ^
+mainOpenMpMPI-V1-Block-Funcional-Real-0.3.cpp:176:150: aviso: puede ser que se utilice ‘scountFeatures’ sin inicializar en esta función [-Wmaybe-uninitialized]
+     MPI_Scatterv(rawData.getDataArray(),scountFeatures,displFeatures,MPI_CHAR,rawData2.getDataArray(),send[0]*dataSizes, MPI_CHAR, 0, MPI_COMM_WORLD);
+                                                                                                                                                      ^
+mainOpenMpMPI-V1-Block-Funcional-Real-0.3.cpp:176:150: aviso: puede ser que se utilice ‘displFeatures’ sin inicializar en esta función [-Wmaybe-uninitialized]
+mainOpenMpMPI-V1-Block-Funcional-Real-0.3.cpp:175:117: aviso: puede ser que se utilice ‘scount’ sin inicializar en esta función [-Wmaybe-uninitialized]
+     MPI_Scatterv(rawData.getValuesRangeArray(), scount, displ, MPI_INT, ranges, send[0], MPI_INT, 0, MPI_COMM_WORLD);
+                                                                                                                     ^
+mainOpenMpMPI-V1-Block-Funcional-Real-0.3.cpp:138:20: aviso: puede ser que se utilice ‘displ’ sin inicializar en esta función [-Wmaybe-uninitialized]
+     int *bigSend, *displ, *scount, *displFeatures, *scountFeatures;
+                    ^
+mainOpenMpMPI-V1-Block-Funcional-Real-0.3.cpp:138:10: aviso: puede ser que se utilice ‘bigSend’ sin inicializar en esta función [-Wmaybe-uninitialized]
+     int *bigSend, *displ, *scount, *displFeatures, *scountFeatures;
+          ^
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp2/Histogram.cpp -o ../../plibOp2/Histogram.o
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp2/JointProb.cpp -o ../../plibOp2/JointProb.o
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp2/MutualInfo.cpp -o ../../plibOp2/MutualInfo.o
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp2/ProbTable.cpp -o ../../plibOp2/ProbTable.o
+mpicxx -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plibOp2/RawData.cpp -o ../../plibOp2/RawData.o
+mpicxx mainOpenMpMPI-V1-Block-Funcional-Real-0.3.o ../../plibOp2/Histogram.o ../../plibOp2/JointProb.o ../../plibOp2/MutualInfo.o ../../plibOp2/ProbTable.o ../../plibOp2/RawData.o  -lboost_thread -L/usr/lib64/ -lboost_thread -fopenmp -o fast-mrmr
+[c6632:16769] [db_pmi.c:457:commit] PMI_KVS_Commit: Operation failed
+[c6632][[30571,1],0][btl_openib_proc.c:157:mca_btl_openib_proc_create] [btl_openib_proc.c:157] ompi_modex_recv failed for peer [[30571,1],1]
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[c6632:16769] Local abort before MPI_INIT completed successfully; not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+[c6632:16773] [db_pmi.c:457:commit] PMI_KVS_Commit: Operation failed
+[c6632][[30571,1],0][btl_openib_proc.c:157:mca_btl_openib_proc_create] [btl_openib_proc.c:157] ompi_modex_recv failed for peer [[30571,1],1]
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[c6632:16773] Local abort before MPI_INIT completed successfully; not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+[c6632:16777] [db_pmi.c:457:commit] PMI_KVS_Commit: Operation failed
+[c6632][[30571,1],0][btl_openib_proc.c:157:mca_btl_openib_proc_create] [btl_openib_proc.c:157] ompi_modex_recv failed for peer [[30571,1],1]
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+[c6632][[30571,1],0][btl_tcp_proc.c:132:mca_btl_tcp_proc_create] ompi_modex_recv: failed with return value=-48
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[c6632:16777] Local abort before MPI_INIT completed successfully; not able to aggregate error messages, and not able to guarantee that all other processes were killed!

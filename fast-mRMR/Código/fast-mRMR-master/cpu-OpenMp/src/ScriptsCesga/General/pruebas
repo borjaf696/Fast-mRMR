@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH -N 1
+#SBATCH -n 24
+#SBATCH -t 00:01:00
+#SBATCH -p thinnodes
+module load gcc boost openmpi
+cd $1
+make clean -f $6
+make -f $6
+cd $2
+N=1
+b=24
+export OMP_NUM_THREADS=1
+mpirun -np 24 $5 -a 50 -f $3 >> $4

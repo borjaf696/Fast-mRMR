@@ -1,0 +1,6 @@
+#!/bin/bash
+array=( 1,2,3 )
+for i in "{array[@]}"
+do
+	export OMP_NUM_THREADS="${i}"
+done

@@ -1,0 +1,132 @@
+SEMANA 1
+
+Pasos seguidos en el desarrollo del trabajo de fin de máster. Paralelización OpenMPI de FastMrmr:
+-> Repaso de sistemas inteligentes y conceptos de IA.
+-> Repaso de sistemas de selección y extracción de características, poniendo especial atención en sistemas de selección basados en ranking.
+-> Repaso de paradigmas multihilo, openMP:
+	-> Primeras paralelizaciones basadas en openMP.
+	-> Pruebas con datasets sintéticos.
+	-> Pruebas sobre .csv de microarrays (fundamento para el que se creo el algoritmo FastMrmr).
+
+Dia 1:
+	-> Estudio del código a nivel general
+	-> Corrección de warnings encontrados -> falta revisar 1.
+	-> Modificación del modo de calculo de la redundancia: uso de conjuntos en lugar de vectores -> pruebas con dataset básico (pequeño tamaño no representativo), creación de un dataset de mayores dimensiones (falta probar) y prueba con dataset real (cancer de prostata -> 2135 features y 102 samples; todavía muy pequeño para determinar si existe optimización o no, a priori parece que mejora ligeramente los tiempos)
+
+----- Día 2: -> Comienzo de la aplicación de OpenMP en los primeros pasos hacía la arquitectura multihilo -> tenemos 4 núcleos en principio.
+
+Dia 2:
+	-> Pruebas sobre datasets de mayor tamaño para verificar si hemos logrado o no algun tipo de optimizacion
+	-> Lectura del tutorial y practica de openMP para c++
+	-> Incorporacion de los pragmas de paralelizacion (for schedule dynamic) en el codigo de fastmrmr y sorprenderse con el tiempo que tarda para un dataset mas o menos grande -.- (breast -> 47293 features y 128 samples)
+	-> Modificacion de los conjuntos de pruebas:
+		-> FeaturesSelection -> 10, 100 y 150 (quizas otros valores mas recomendables)
+	-> Lectura de todo el código nuevamente y toma de contacto con todas y cada una de las clases.
+
+Dia 3:
+	-> Estudio final de todo el código en c++ -> buenas vibraciones.
+	-> Planteamiento de la opción: visited -> Prueba (cuando termine la ejecución con el set.)
+	-> Estudio de los diferentes .cpp para buscar potenciales paralelizaciones (RawData, Histogram, ProbTable, JoinProb, MutualInfo):
+		-> RawData -> Lectura de los datos en formato .mrmr -> como matiz recordar que las 2 primeras lecturas ofrecen: FeatureSize y DataSize.
+			-> Métodos principales:
+				- CalculateDsandFs -> determinar el numero de samples y de features que se tienen.
+				- LoadData -> Carga de los datos -> Para cada sample calcula todos los valores de sus diferentes features -> Ubica de manera contigua en memoria los diferentes valores de las features -> fácil acceso posteriormente.
+				- CalculateVR -> Calcula los diferentes valores que toma una determinada feature -> Usado para generar histogramas posteriormente (Histogram y joinProb)
+			-> RawData -> //Paralelizable -> LoadData y CalculateVR -> ambas
+				-> LoadData -> O(dsxfs) = Dado que nos moveremos a priori en el entorno de las micromatrices fs >> ds
+				-> CalculateVR -> O(dsxfs) = Dado que nos moveremos a priori en el entorno de las micromatrice fs >> ds
+		-> ProbTable -> Calculo de la matriz de probabilidades (se calcula una matriz de doubles) -> cada celda la matriz contiene para la feature i (fila) la probabilidad marginal del valor j (columna).
+			-> Métodos principales:
+				- Calculate -> Calcula las probabilidades -> llama histogram.gethistogram(featureI) para cada feature (logico), pero luego para los distintos vr calcula las probabilidades -> se plantea la probabilidad de calcular las probabilidades directamente y devolverlas -> Si VR muy grande mejora significativa.
+			-> ProbTable -> //Paralelizable -> Para las features 
+				- Calculate -> O(fsxdsxvr) -> si optimización -> O(fsxds) -> Si paralelizado partiendo de que fs >> ds -> a priori se pueden obtener buenos resultados.
+		-> MutualInfo y JoinProb -> se usa para calcular la información mutua entre dos features seleccionadas; su paralelizado no ofrece demasiado interes.
+			-> MutualInfo::get(I1,I2) -> O(vr1xvr2) -> si se tienen valores de vr1 y vr2 muy elevados resultaría interesante pero deberían ser muy altos.
+				-> Se calcula en get además la probabilidad conjunta de las 2 features -> I1 e I2 -> O(ds) -> por lo general ds en el entorno de micromatrices es bajo.
+			-> Ninguna de las 2 parece ser especialmente sensible a una paralelización.
+	-> Ejecutar y probar -> cambio de los scripts a 3 ejecuciones, 10 son demasiadas.
+Dia 4:
+	-> Repaso de las opciones de optimizacion planteadas y aplicacion de aquellas que no fuesen aplicadas en dia 3.
+		-> OpenMpMain -> Modificación de los vectores de relevancia y redundancia; por punteros a doubles -> necesario tener la memoria reservada a priori para poder acceder a todas las posiciones de interés y así poder ir trabajando cada uno de los hilos.
+		-> RawData::LoadData -> fread, desplaza un puntero con cada lectura -> problema de paralelizado pues necesitas haber leído los 10 primeros para leer el undecimo -> búsqueda de alguna función de lectura que se pueda indicar un offset -> no es viable, para moverse por el fichero es necesario un offset, al desplazarse un thread mueve el offset del resto, sería necesario o bien salvar el *FILE para cada uno lo cual es un gasto de memoria absurdamente alto o bien hacer "omp pragma critical" toda la lectura con lo que no solucionamos nada.
+		-> Segundo intento de montar la reducción u optimización de la construcción de tablas de probabilidades marginales -> ProbTable e Histogram.:
+			-> Calculate2-getHistogram2 -> Elimina 2 bucles (inicialización del array acumulador del histograma acumulada y el cálculo de las probabilidades).
+
+SEMANA 2:
+Curso de MPI-Avanzado en el CESGA -> Dedicación única a ella...
+
+SEMANA 3:
+	-> Trabajo individual sobre MPI, para usar conceptos como directivas colectivas, directivas no síncronas(asíncronas)
+	-> Reunión con Jorge:
+		-> Trabajos pend: Tabla de resultados para -> Tiempo original y Tiempo OpenMP (1th,2th,4th,6th,12th y 24th) -> DONE
+		-> Empezar a implementar la version de MPI:
+			-> Versión número 1:
+				-> Recordar poner: export OMP_NUM_THREADS=1
+				-> División de las features por bloques y asociación de cada bloque a cada proceso.
+				-> Gather de los datos y MaxRelevance para determinar la respuesta.
+		-> Continuar con la implementación de MPI:
+				-> Implementacion de paso de relevanciasParciales con Allgatherv:
+					-> Necesidad de Allgatherv:
+						-> Gather necesario para mandar cada bloque de tamaño sizePerProcess
+						-> All (versión) pues es necesario que todos los procesos tengan una copia en local de todas las relevancias para poder calcular la MI posteriormente.
+						-> v (versión) no todos los sizePerProcess tienen por que ser del mismo tamaño:			
+							-> Necesario definir tamaños adhoc para cada proceso y desplazamientos.
+				-> Implementación de cálculo de MRMR:
+					-> Inicialmente dejaremos que todos lleven conocimiento en tiempo real de las features seleccionadas aunque esto se modificará más adelante para que dicho conocimiento pertenezca únicamente al proceso maestro (0 en nuestro caso).
+					-> First try:
+						-> Dividimos en bloques la entrada.
+						-> Cada proceso se lleva su bloque correspondiente.
+						-> Al final de cada etapa (iteración) cuando se ha de seleccionar la feature, se realiza un gather de 2 elementos: mrmr (el que supone el máximo de los cálculados para cada proceso) y el número de la feature.
+						-> Únicamente el master (0 en este caso) calcula el máximo de los Mrmr y lo notifica con un Bcast.
+						-> Done! Funciona de maner adecuada, pero es una paralelización muy absurda -> Mejoras -> eliminar el Allgatherv -> no es necesaria la copia en todos los procesos y hacer que cada proceso salve la cantidad de memoria adecuada y solo la necesaria. -> O igual si es necesario para determinar el maximo...
+					-> Second try:
+						-> Seguimos con el igather -> habrá que ir viendo a ver si la versión asíncrona ayuda o empeora... -> 
+							Empeora: 
+								- obliga a almacenar en el maestro todas los Mrmr de cada etapa -> Más espacio es necesario
+								- no hay un envío en cada cálculo ahora si, entrada y salida se convierte en un cuello de botella (incluso al ser no bloqueante)
+								- obliga a tener estructuras adicionales en el resto de procesos.
+								- en el caso anterior cada proceso procesaba un tamaño fijo de N elementos. En este caso también pero exige que el proceso maestro obtenga el máximo de cada Mrmr en cada iteración (y cuando numberFeatures es muy elevado se pierde capacidad de paralelizado, se hila en grano más grueso)
+								- mejor opción la anterior.
+					-> Third try:
+						-> Opción de ir almacenando el mayor Mrmr a partir de envíos asíncronos.
+							- Usar MPI_Iprobe (para ver si he recibido o no mensajes en un cierto tiempo)
+						-> Opción cíclica para comparar versiones de MPI.
+						-> Comparación de ambas versiones: bloques y cíclica. 
+							-> Resultados diferentes a razón de que la técnica por bloques compara por orden siempre, mantiene el orden de las features -> mientras que la distribución ciclica no. Proceso 0 no estudia la feature 13 (como en el resto de casos) y por tanto no es seleccioanda de primera (esto ocurre pues hay muchas features que comparten nivel iniciale de relevancia) -> Igual problema de ejemplo excesivamente sencillo.
+							-> Comparativa muestra resultados de tiempos muy similares para ambas distribuciones.
+
+SEMANA 4:
+	-> Empezamos con reunion con Verónica y Jorge -> todo correcto, nos decantamos por versión en bloques de MPI: esto es debido a que el uso de la cíclica solo estaría justificado para la selección de un número de features muy alto. Mientras que para los casos de microarrays realmente no es demasiado relevante.
+	-> Tareas establecidas:
+		-> Computo en el plutón -> toma de contacto con el mismo y ejecución de los datos:
+					-> Almacenamiento en Scratch de los datasets.
+					-> Almacenamiento en Home del código
+		-> Descarga de los datasets de Epsilon y microarrays y prueba nuevamente.
+		-> Traducción a formato .mrmr de Epsilon para que sea usable.
+		-> Prueba con distintas distribuciones de hilos y procesos de MPI y openMP:(recordar que hay que mirar el Anexo 6 de la guía del ft2 para ver como organizar la distribución de procesos y nodos).
+				-> 1p 24hilos
+				-> 2p 12hilos
+				-> 4p 6hilos
+				-> 12p 2hilos
+				-> 24p 1hilo
+		-> Hacer una versión conjunta con lectura de datos únicamente por parte de 0 y distribución posterior (último trabajo de implementación).
+SEMANA 5:
+	-> La semana pasada hemos estado algo ociosos a causa de los problemas de epsylon_normalized y el cluster plutón. Pero volvemos a retomar todo lo pedido por Jorgito y Vero.
+	-> Cambio en el sistema de ficheros utilizado:
+		-> Se han diferenciado las salidas del: Cesga, plutón y domicilio.
+		-> Se han hecho scripts ad-hoc para: Cesga, plutón y domicilio.
+		-> Prueba de que todo funciona acorde a lo esperado.
+
+SEMANA 6:
+	-> Vuelta al trabajo.
+		-> Descarga de los datasets indicados y creacion de los scripts para:
+			-> Descomprimir a svmlib formato
+			-> Creacion de la estructura de ficheros para cada uno de los nuevos datasets
+			-> Creacion de los scripts para el cesga y el pluton para cada uno de los nuevos datasets
+
+SEMANA Sabe Dios Cual:
+	-> Ya esta terminado el codigo a realizar en cuestión. Lectura solo en el proceso 0 y distribución de los datos a cada uno de los procesos que corresponde.
+	-> Necesaria la implementación de un discretizador para discretizar los datos en 256 valores como máximo (necesario pues Mrmr no debe trabajar sobre datos no discretos (datos continuos)) -> EqualWidth técnica empleada (fundamentalmente (Max-Min)/(num_divisiones) y luego asignarle un punto a cada uno)
+	-> Ponencia en el cesga -> Solo openMP:
+		-> Datasets pequeños -> PengLab: Lung, colon, leukemia, lymphoma y NCI
+		-> Trabajo tambien sobre Epsylon y ECBDL14.

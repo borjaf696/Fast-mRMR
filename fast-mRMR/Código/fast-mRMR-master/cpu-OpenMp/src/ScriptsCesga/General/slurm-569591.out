@@ -1,0 +1,206 @@
+gcc/5.3.0 loaded
+boost/1.61.0 loaded
+openmpi/1.10.2 loaded
+rm *.o
+rm ../../plib/*.o
+rm fast-mrmr
+clear
+[3J[H[2Jg++ -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp main3.cpp -o main3.o
+g++ -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plib/Histogram.cpp -o ../../plib/Histogram.o
+g++ -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plib/JointProb.cpp -o ../../plib/JointProb.o
+g++ -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plib/MutualInfo.cpp -o ../../plib/MutualInfo.o
+g++ -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plib/ProbTable.cpp -o ../../plib/ProbTable.o
+g++ -c -m64 -O3 -Wall  -I../../include/   -I/usr/include/boost/ -fopenmp ../../plib/RawData.cpp -o ../../plib/RawData.o
+g++ main3.o ../../plib/Histogram.o ../../plib/JointProb.o ../../plib/MutualInfo.o ../../plib/ProbTable.o ../../plib/RawData.o  -lboost_thread -L/usr/lib64/ -lboost_thread -fopenmp -o fast-mrmr
+*** glibc detected *** ./../../NoParallel/fast-mrmr: double free or corruption (!prev): 0x0000000001f316c0 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x75f4e)[0x7f15d47e0f4e]
+/lib64/libc.so.6(+0x78cf0)[0x7f15d47e3cf0]
+./../../NoParallel/fast-mrmr[0x4025e3]
+./../../NoParallel/fast-mrmr[0x40274a]
+./../../NoParallel/fast-mrmr[0x401133]
+/lib64/libc.so.6(__libc_start_main+0xfd)[0x7f15d4789d5d]
+./../../NoParallel/fast-mrmr[0x401831]
+======= Memory map: ========
+00400000-00404000 r-xp 00000000 00:37 8242130                            /mnt/EMC/Home_FT2/home/ulc/es/bfc/TFM/Código/fast-mRMR-master/cpu-OpenMp/src/NoParallel/fast-mrmr
+00603000-00604000 rw-p 00003000 00:37 8242130                            /mnt/EMC/Home_FT2/home/ulc/es/bfc/TFM/Código/fast-mRMR-master/cpu-OpenMp/src/NoParallel/fast-mrmr
+01f16000-01f48000 rw-p 00000000 00:00 0                                  [heap]
+7f1118000000-7f1118021000 rw-p 00000000 00:00 0 
+7f1118021000-7f111c000000 ---p 00000000 00:00 0 
+7f111ea85000-7f15d415c000 rw-p 00000000 00:00 0 
+7f15d415c000-7f15d415e000 r-xp 00000000 08:01 390507                     /lib64/libdl-2.12.so
+7f15d415e000-7f15d435e000 ---p 00002000 08:01 390507                     /lib64/libdl-2.12.so
+7f15d435e000-7f15d435f000 r--p 00002000 08:01 390507                     /lib64/libdl-2.12.so
+7f15d435f000-7f15d4360000 rw-p 00003000 08:01 390507                     /lib64/libdl-2.12.so
+7f15d4360000-7f15d4367000 r-xp 00000000 08:01 390772                     /lib64/librt-2.12.so
+7f15d4367000-7f15d4566000 ---p 00007000 08:01 390772                     /lib64/librt-2.12.so
+7f15d4566000-7f15d4567000 r--p 00006000 08:01 390772                     /lib64/librt-2.12.so
+7f15d4567000-7f15d4568000 rw-p 00007000 08:01 390772                     /lib64/librt-2.12.so
+7f15d4568000-7f15d456b000 r-xp 00000000 00:20 4582147                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_system.so.1.61.0
+7f15d456b000-7f15d476a000 ---p 00003000 00:20 4582147                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_system.so.1.61.0
+7f15d476a000-7f15d476b000 rw-p 00002000 00:20 4582147                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_system.so.1.61.0
+7f15d476b000-7f15d48f5000 r-xp 00000000 08:01 390799                     /lib64/libc-2.12.so
+7f15d48f5000-7f15d4af5000 ---p 0018a000 08:01 390799                     /lib64/libc-2.12.so
+7f15d4af5000-7f15d4af9000 r--p 0018a000 08:01 390799                     /lib64/libc-2.12.so
+7f15d4af9000-7f15d4afa000 rw-p 0018e000 08:01 390799                     /lib64/libc-2.12.so
+7f15d4afa000-7f15d4aff000 rw-p 00000000 00:00 0 
+7f15d4aff000-7f15d4b16000 r-xp 00000000 08:01 390783                     /lib64/libpthread-2.12.so
+7f15d4b16000-7f15d4d16000 ---p 00017000 08:01 390783                     /lib64/libpthread-2.12.so
+7f15d4d16000-7f15d4d17000 r--p 00017000 08:01 390783                     /lib64/libpthread-2.12.so
+7f15d4d17000-7f15d4d18000 rw-p 00018000 08:01 390783                     /lib64/libpthread-2.12.so
+7f15d4d18000-7f15d4d1c000 rw-p 00000000 00:00 0 
+7f15d4d1c000-7f15d4d32000 r-xp 00000000 00:20 201388                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgcc_s.so.1
+7f15d4d32000-7f15d4f31000 ---p 00016000 00:20 201388                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgcc_s.so.1
+7f15d4f31000-7f15d4f32000 rw-p 00015000 00:20 201388                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgcc_s.so.1
+7f15d4f32000-7f15d4f52000 r-xp 00000000 00:20 201410                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgomp.so.1.0.0
+7f15d4f52000-7f15d5152000 ---p 00020000 00:20 201410                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgomp.so.1.0.0
+7f15d5152000-7f15d5153000 rw-p 00020000 00:20 201410                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgomp.so.1.0.0
+7f15d5153000-7f15d51d6000 r-xp 00000000 08:01 390613                     /lib64/libm-2.12.so
+7f15d51d6000-7f15d53d5000 ---p 00083000 08:01 390613                     /lib64/libm-2.12.so
+7f15d53d5000-7f15d53d6000 r--p 00082000 08:01 390613                     /lib64/libm-2.12.so
+7f15d53d6000-7f15d53d7000 rw-p 00083000 08:01 390613                     /lib64/libm-2.12.so
+7f15d53d7000-7f15d5542000 r-xp 00000000 00:20 201437                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libstdc++.so.6.0.21
+7f15d5542000-7f15d5742000 ---p 0016b000 00:20 201437                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libstdc++.so.6.0.21
+7f15d5742000-7f15d574c000 r--p 0016b000 00:20 201437                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libstdc++.so.6.0.21
+7f15d574c000-7f15d574e000 rw-p 00175000 00:20 201437                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libstdc++.so.6.0.21
+7f15d574e000-7f15d5752000 rw-p 00000000 00:00 0 
+7f15d5752000-7f15d5778000 r-xp 00000000 00:20 6738937                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_thread.so.1.61.0
+7f15d5778000-7f15d5977000 ---p 00026000 00:20 6738937                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_thread.so.1.61.0
+7f15d5977000-7f15d5979000 rw-p 00025000 00:20 6738937                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_thread.so.1.61.0
+7f15d5979000-7f15d5999000 r-xp 00000000 08:01 390381                     /lib64/ld-2.12.so
+7f15d5b8e000-7f15d5b98000 rw-p 00000000 00:00 0 
+7f15d5b98000-7f15d5b99000 r--p 0001f000 08:01 390381                     /lib64/ld-2.12.so
+7f15d5b99000-7f15d5b9a000 rw-p 00020000 08:01 390381                     /lib64/ld-2.12.so
+7f15d5b9a000-7f15d5b9b000 rw-p 00000000 00:00 0 
+7ffeff337000-7ffeff34d000 rw-p 00000000 00:00 0                          [stack]
+7ffeff388000-7ffeff389000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+/SLURM/job569591/slurm_script: line 12: 26314 Aborted                 $5 -a 50 -f $3 >> $4
+*** glibc detected *** ./../../NoParallel/fast-mrmr: double free or corruption (!prev): 0x0000000001e836c0 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x75f4e)[0x7f73ef1cbf4e]
+/lib64/libc.so.6(+0x78cf0)[0x7f73ef1cecf0]
+./../../NoParallel/fast-mrmr[0x4025e3]
+./../../NoParallel/fast-mrmr[0x40274a]
+./../../NoParallel/fast-mrmr[0x401133]
+/lib64/libc.so.6(__libc_start_main+0xfd)[0x7f73ef174d5d]
+./../../NoParallel/fast-mrmr[0x401831]
+======= Memory map: ========
+00400000-00404000 r-xp 00000000 00:37 8242130                            /mnt/EMC/Home_FT2/home/ulc/es/bfc/TFM/Código/fast-mRMR-master/cpu-OpenMp/src/NoParallel/fast-mrmr
+00603000-00604000 rw-p 00003000 00:37 8242130                            /mnt/EMC/Home_FT2/home/ulc/es/bfc/TFM/Código/fast-mRMR-master/cpu-OpenMp/src/NoParallel/fast-mrmr
+01e68000-01e9a000 rw-p 00000000 00:00 0                                  [heap]
+7f6f34000000-7f6f34021000 rw-p 00000000 00:00 0 
+7f6f34021000-7f6f38000000 ---p 00000000 00:00 0 
+7f6f39470000-7f73eeb47000 rw-p 00000000 00:00 0 
+7f73eeb47000-7f73eeb49000 r-xp 00000000 08:01 390507                     /lib64/libdl-2.12.so
+7f73eeb49000-7f73eed49000 ---p 00002000 08:01 390507                     /lib64/libdl-2.12.so
+7f73eed49000-7f73eed4a000 r--p 00002000 08:01 390507                     /lib64/libdl-2.12.so
+7f73eed4a000-7f73eed4b000 rw-p 00003000 08:01 390507                     /lib64/libdl-2.12.so
+7f73eed4b000-7f73eed52000 r-xp 00000000 08:01 390772                     /lib64/librt-2.12.so
+7f73eed52000-7f73eef51000 ---p 00007000 08:01 390772                     /lib64/librt-2.12.so
+7f73eef51000-7f73eef52000 r--p 00006000 08:01 390772                     /lib64/librt-2.12.so
+7f73eef52000-7f73eef53000 rw-p 00007000 08:01 390772                     /lib64/librt-2.12.so
+7f73eef53000-7f73eef56000 r-xp 00000000 00:20 4582147                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_system.so.1.61.0
+7f73eef56000-7f73ef155000 ---p 00003000 00:20 4582147                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_system.so.1.61.0
+7f73ef155000-7f73ef156000 rw-p 00002000 00:20 4582147                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_system.so.1.61.0
+7f73ef156000-7f73ef2e0000 r-xp 00000000 08:01 390799                     /lib64/libc-2.12.so
+7f73ef2e0000-7f73ef4e0000 ---p 0018a000 08:01 390799                     /lib64/libc-2.12.so
+7f73ef4e0000-7f73ef4e4000 r--p 0018a000 08:01 390799                     /lib64/libc-2.12.so
+7f73ef4e4000-7f73ef4e5000 rw-p 0018e000 08:01 390799                     /lib64/libc-2.12.so
+7f73ef4e5000-7f73ef4ea000 rw-p 00000000 00:00 0 
+7f73ef4ea000-7f73ef501000 r-xp 00000000 08:01 390783                     /lib64/libpthread-2.12.so
+7f73ef501000-7f73ef701000 ---p 00017000 08:01 390783                     /lib64/libpthread-2.12.so
+7f73ef701000-7f73ef702000 r--p 00017000 08:01 390783                     /lib64/libpthread-2.12.so
+7f73ef702000-7f73ef703000 rw-p 00018000 08:01 390783                     /lib64/libpthread-2.12.so
+7f73ef703000-7f73ef707000 rw-p 00000000 00:00 0 
+7f73ef707000-7f73ef71d000 r-xp 00000000 00:20 201388                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgcc_s.so.1
+7f73ef71d000-7f73ef91c000 ---p 00016000 00:20 201388                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgcc_s.so.1
+7f73ef91c000-7f73ef91d000 rw-p 00015000 00:20 201388                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgcc_s.so.1
+7f73ef91d000-7f73ef93d000 r-xp 00000000 00:20 201410                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgomp.so.1.0.0
+7f73ef93d000-7f73efb3d000 ---p 00020000 00:20 201410                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgomp.so.1.0.0
+7f73efb3d000-7f73efb3e000 rw-p 00020000 00:20 201410                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgomp.so.1.0.0
+7f73efb3e000-7f73efbc1000 r-xp 00000000 08:01 390613                     /lib64/libm-2.12.so
+7f73efbc1000-7f73efdc0000 ---p 00083000 08:01 390613                     /lib64/libm-2.12.so
+7f73efdc0000-7f73efdc1000 r--p 00082000 08:01 390613                     /lib64/libm-2.12.so
+7f73efdc1000-7f73efdc2000 rw-p 00083000 08:01 390613                     /lib64/libm-2.12.so
+7f73efdc2000-7f73eff2d000 r-xp 00000000 00:20 201437                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libstdc++.so.6.0.21
+7f73eff2d000-7f73f012d000 ---p 0016b000 00:20 201437                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libstdc++.so.6.0.21
+7f73f012d000-7f73f0137000 r--p 0016b000 00:20 201437                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libstdc++.so.6.0.21
+7f73f0137000-7f73f0139000 rw-p 00175000 00:20 201437                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libstdc++.so.6.0.21
+7f73f0139000-7f73f013d000 rw-p 00000000 00:00 0 
+7f73f013d000-7f73f0163000 r-xp 00000000 00:20 6738937                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_thread.so.1.61.0
+7f73f0163000-7f73f0362000 ---p 00026000 00:20 6738937                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_thread.so.1.61.0
+7f73f0362000-7f73f0364000 rw-p 00025000 00:20 6738937                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_thread.so.1.61.0
+7f73f0364000-7f73f0384000 r-xp 00000000 08:01 390381                     /lib64/ld-2.12.so
+7f73f0579000-7f73f0583000 rw-p 00000000 00:00 0 
+7f73f0583000-7f73f0584000 r--p 0001f000 08:01 390381                     /lib64/ld-2.12.so
+7f73f0584000-7f73f0585000 rw-p 00020000 08:01 390381                     /lib64/ld-2.12.so
+7f73f0585000-7f73f0586000 rw-p 00000000 00:00 0 
+7ffe2fc7e000-7ffe2fc94000 rw-p 00000000 00:00 0                          [stack]
+7ffe2fd2a000-7ffe2fd2b000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+/SLURM/job569591/slurm_script: line 13: 26335 Aborted                 $5 -a 100 -f $3 >> $4
+*** glibc detected *** ./../../NoParallel/fast-mrmr: double free or corruption (!prev): 0x0000000000aea6c0 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x75f4e)[0x7f75f7586f4e]
+/lib64/libc.so.6(+0x78cf0)[0x7f75f7589cf0]
+./../../NoParallel/fast-mrmr[0x4025e3]
+./../../NoParallel/fast-mrmr[0x40274a]
+./../../NoParallel/fast-mrmr[0x401133]
+/lib64/libc.so.6(__libc_start_main+0xfd)[0x7f75f752fd5d]
+./../../NoParallel/fast-mrmr[0x401831]
+======= Memory map: ========
+00400000-00404000 r-xp 00000000 00:37 8242130                            /mnt/EMC/Home_FT2/home/ulc/es/bfc/TFM/Código/fast-mRMR-master/cpu-OpenMp/src/NoParallel/fast-mrmr
+00603000-00604000 rw-p 00003000 00:37 8242130                            /mnt/EMC/Home_FT2/home/ulc/es/bfc/TFM/Código/fast-mRMR-master/cpu-OpenMp/src/NoParallel/fast-mrmr
+00acf000-00b01000 rw-p 00000000 00:00 0                                  [heap]
+7f713c000000-7f713c021000 rw-p 00000000 00:00 0 
+7f713c021000-7f7140000000 ---p 00000000 00:00 0 
+7f714182b000-7f75f6f02000 rw-p 00000000 00:00 0 
+7f75f6f02000-7f75f6f04000 r-xp 00000000 08:01 390507                     /lib64/libdl-2.12.so
+7f75f6f04000-7f75f7104000 ---p 00002000 08:01 390507                     /lib64/libdl-2.12.so
+7f75f7104000-7f75f7105000 r--p 00002000 08:01 390507                     /lib64/libdl-2.12.so
+7f75f7105000-7f75f7106000 rw-p 00003000 08:01 390507                     /lib64/libdl-2.12.so
+7f75f7106000-7f75f710d000 r-xp 00000000 08:01 390772                     /lib64/librt-2.12.so
+7f75f710d000-7f75f730c000 ---p 00007000 08:01 390772                     /lib64/librt-2.12.so
+7f75f730c000-7f75f730d000 r--p 00006000 08:01 390772                     /lib64/librt-2.12.so
+7f75f730d000-7f75f730e000 rw-p 00007000 08:01 390772                     /lib64/librt-2.12.so
+7f75f730e000-7f75f7311000 r-xp 00000000 00:20 4582147                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_system.so.1.61.0
+7f75f7311000-7f75f7510000 ---p 00003000 00:20 4582147                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_system.so.1.61.0
+7f75f7510000-7f75f7511000 rw-p 00002000 00:20 4582147                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_system.so.1.61.0
+7f75f7511000-7f75f769b000 r-xp 00000000 08:01 390799                     /lib64/libc-2.12.so
+7f75f769b000-7f75f789b000 ---p 0018a000 08:01 390799                     /lib64/libc-2.12.so
+7f75f789b000-7f75f789f000 r--p 0018a000 08:01 390799                     /lib64/libc-2.12.so
+7f75f789f000-7f75f78a0000 rw-p 0018e000 08:01 390799                     /lib64/libc-2.12.so
+7f75f78a0000-7f75f78a5000 rw-p 00000000 00:00 0 
+7f75f78a5000-7f75f78bc000 r-xp 00000000 08:01 390783                     /lib64/libpthread-2.12.so
+7f75f78bc000-7f75f7abc000 ---p 00017000 08:01 390783                     /lib64/libpthread-2.12.so
+7f75f7abc000-7f75f7abd000 r--p 00017000 08:01 390783                     /lib64/libpthread-2.12.so
+7f75f7abd000-7f75f7abe000 rw-p 00018000 08:01 390783                     /lib64/libpthread-2.12.so
+7f75f7abe000-7f75f7ac2000 rw-p 00000000 00:00 0 
+7f75f7ac2000-7f75f7ad8000 r-xp 00000000 00:20 201388                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgcc_s.so.1
+7f75f7ad8000-7f75f7cd7000 ---p 00016000 00:20 201388                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgcc_s.so.1
+7f75f7cd7000-7f75f7cd8000 rw-p 00015000 00:20 201388                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgcc_s.so.1
+7f75f7cd8000-7f75f7cf8000 r-xp 00000000 00:20 201410                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgomp.so.1.0.0
+7f75f7cf8000-7f75f7ef8000 ---p 00020000 00:20 201410                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgomp.so.1.0.0
+7f75f7ef8000-7f75f7ef9000 rw-p 00020000 00:20 201410                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libgomp.so.1.0.0
+7f75f7ef9000-7f75f7f7c000 r-xp 00000000 08:01 390613                     /lib64/libm-2.12.so
+7f75f7f7c000-7f75f817b000 ---p 00083000 08:01 390613                     /lib64/libm-2.12.so
+7f75f817b000-7f75f817c000 r--p 00082000 08:01 390613                     /lib64/libm-2.12.so
+7f75f817c000-7f75f817d000 rw-p 00083000 08:01 390613                     /lib64/libm-2.12.so
+7f75f817d000-7f75f82e8000 r-xp 00000000 00:20 201437                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libstdc++.so.6.0.21
+7f75f82e8000-7f75f84e8000 ---p 0016b000 00:20 201437                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libstdc++.so.6.0.21
+7f75f84e8000-7f75f84f2000 r--p 0016b000 00:20 201437                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libstdc++.so.6.0.21
+7f75f84f2000-7f75f84f4000 rw-p 00175000 00:20 201437                     /mnt/EMC/Optcesga_FT2/opt/cesga/gcc/5.3.0/packages/gcc-5.3.0/lib64/libstdc++.so.6.0.21
+7f75f84f4000-7f75f84f8000 rw-p 00000000 00:00 0 
+7f75f84f8000-7f75f851e000 r-xp 00000000 00:20 6738937                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_thread.so.1.61.0
+7f75f851e000-7f75f871d000 ---p 00026000 00:20 6738937                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_thread.so.1.61.0
+7f75f871d000-7f75f871f000 rw-p 00025000 00:20 6738937                    /mnt/EMC/Optcesga_FT2/opt/cesga/boost/1.61.0/gcc/5.3.0/lib/libboost_thread.so.1.61.0
+7f75f871f000-7f75f873f000 r-xp 00000000 08:01 390381                     /lib64/ld-2.12.so
+7f75f8934000-7f75f893e000 rw-p 00000000 00:00 0 
+7f75f893e000-7f75f893f000 r--p 0001f000 08:01 390381                     /lib64/ld-2.12.so
+7f75f893f000-7f75f8940000 rw-p 00020000 08:01 390381                     /lib64/ld-2.12.so
+7f75f8940000-7f75f8941000 rw-p 00000000 00:00 0 
+7ffe6e8f7000-7ffe6e90d000 rw-p 00000000 00:00 0                          [stack]
+7ffe6e953000-7ffe6e954000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+/SLURM/job569591/slurm_script: line 14: 26354 Aborted                 $5 -a 200 -f $3 >> $4

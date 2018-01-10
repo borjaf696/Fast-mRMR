@@ -1,0 +1,54 @@
+Pasos seguidos en el desarrollo del trabajo de fin de máster. Paralelización OpenMPI de FastMrmr:
+-> Repaso de sistemas inteligentes y conceptos de IA.
+-> Repaso de sistemas de selección y extracción de características, poniendo especial atención en sistemas de selección basados en ranking.
+-> Repaso de paradigmas multihilo, openMP:
+	-> Primeras paralelizaciones basadas en openMP.
+	-> Pruebas con datasets sintéticos.
+	-> Pruebas sobre .csv de microarrays (fundamento para el que se creo el algoritmo FastMrmr).
+
+Dia 1:
+	-> Estudio del código a nivel general
+	-> Corrección de warnings encontrados -> falta revisar 1.
+	-> Modificación del modo de calculo de la redundancia: uso de conjuntos en lugar de vectores -> pruebas con dataset básico (pequeño tamaño no representativo), creación de un dataset de mayores dimensiones (falta probar) y prueba con dataset real (cancer de prostata -> 2135 features y 102 samples; todavía muy pequeño para determinar si existe optimización o no, a priori parece que mejora ligeramente los tiempos)
+
+----- Día 2: -> Comienzo de la aplicación de OpenMP en los primeros pasos hacía la arquitectura multihilo -> tenemos 4 núcleos en principio.
+
+Dia 2:
+	-> Pruebas sobre datasets de mayor tamaño para verificar si hemos logrado o no algun tipo de optimizacion
+	-> Lectura del tutorial y practica de openMP para c++
+	-> Incorporacion de los pragmas de paralelizacion (for schedule dynamic) en el codigo de fastmrmr y sorprenderse con el tiempo que tarda para un dataset mas o menos grande -.- (breast -> 47293 features y 128 samples)
+	-> Modificacion de los conjuntos de pruebas:
+		-> FeaturesSelection -> 10, 100 y 150 (quizas otros valores mas recomendables)
+	-> Lectura de todo el código nuevamente y toma de contacto con todas y cada una de las clases.
+
+Dia 3:
+	-> Estudio final de todo el código en c++ -> buenas vibraciones.
+	-> Planteamiento de la opción: visited -> Prueba (cuando termine la ejecución con el set.)
+	-> Estudio de los diferentes .cpp para buscar potenciales paralelizaciones (RawData, Histogram, ProbTable, JoinProb, MutualInfo):
+		-> RawData -> Lectura de los datos en formato .mrmr -> como matiz recordar que las 2 primeras lecturas ofrecen: FeatureSize y DataSize.
+			-> Métodos principales:
+				- CalculateDsandFs -> determinar el numero de samples y de features que se tienen.
+				- LoadData -> Carga de los datos -> Para cada sample calcula todos los valores de sus diferentes features -> Ubica de manera contigua en memoria los diferentes valores de las features -> fácil acceso posteriormente.
+				- CalculateVR -> Calcula los diferentes valores que toma una determinada feature -> Usado para generar histogramas posteriormente (Histogram y joinProb)
+			-> RawData -> //Paralelizable -> LoadData y CalculateVR -> ambas
+				-> LoadData -> O(dsxfs) = Dado que nos moveremos a priori en el entorno de las micromatrices fs >> ds
+				-> CalculateVR -> O(dsxfs) = Dado que nos moveremos a priori en el entorno de las micromatrice fs >> ds
+		-> ProbTable -> Calculo de la matriz de probabilidades (se calcula una matriz de doubles) -> cada celda la matriz contiene para la feature i (fila) la probabilidad marginal del valor j (columna).
+			-> Métodos principales:
+				- Calculate -> Calcula las probabilidades -> llama histogram.gethistogram(featureI) para cada feature (logico), pero luego para los distintos vr calcula las probabilidades -> se plantea la probabilidad de calcular las probabilidades directamente y devolverlas -> Si VR muy grande mejora significativa.
+			-> ProbTable -> //Paralelizable -> Para las features 
+				- Calculate -> O(fsxdsxvr) -> si optimización -> O(fsxds) -> Si paralelizado partiendo de que fs >> ds -> a priori se pueden obtener buenos resultados.
+		-> MutualInfo y JoinProb -> se usa para calcular la información mutua entre dos features seleccionadas; su paralelizado no ofrece demasiado interes.
+			-> MutualInfo::get(I1,I2) -> O(vr1xvr2) -> si se tienen valores de vr1 y vr2 muy elevados resultaría interesante pero deberían ser muy altos.
+				-> Se calcula en get además la probabilidad conjunta de las 2 features -> I1 e I2 -> O(ds) -> por lo general ds en el entorno de micromatrices es bajo.
+			-> Ninguna de las 2 parece ser especialmente sensible a una paralelización.
+	-> Ejecutar y probar -> cambio de los scripts a 3 ejecuciones, 10 son demasiadas.
+Dia 4:
+	-> Repaso de las opciones de optimizacion planteadas y aplicacion de aquellas que no fuesen aplicadas en dia 3.
+		-> OpenMpMain -> Modificación de los vectores de relevancia y redundancia; por punteros a doubles -> necesario tener la memoria reservada a priori para poder acceder a todas las posiciones de interés y así poder ir trabajando cada uno de los hilos.
+		-> RawData::LoadData -> fread, desplaza un puntero con cada lectura -> problema de paralelizado pues necesitas haber leído los 10 primeros para leer el undecimo -> búsqueda de alguna función de lectura que se pueda indicar un offset -> no es viable, para moverse por el fichero es necesario un offset, al desplazarse un thread mueve el offset del resto, sería necesario o bien salvar el *FILE para cada uno lo cual es un gasto de memoria absurdamente alto o bien hacer "omp pragma critical" toda la lectura con lo que no solucionamos nada.
+		-> Segundo intento de montar la reducción u optimización de la construcción de tablas de probabilidades marginales -> ProbTable e Histogram.:
+			-> Calculate2-getHistogram2 -> Elimina 2 bucles (inicialización del array acumulador del histograma acumulada y el cálculo de las probabilidades).
+		
+
+		

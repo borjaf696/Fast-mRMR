@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH -N 6
+#SBATCH -n 144
+#SBATCH -t 45:00:00
+#SBATCH -p thinnodes
+module load gcc boost openmpi
+cd $1
+make clean
+make
+cd $6 
+mpirun -np 2 $7 -a 50 -f $2 >> $3
+mpirun -np 2 $7 -a 100 -f $2 >> $3
+mpirun -np 2 $7 -a 200 -f $2 >> $3
+
+mpirun -np 2 $7 -a 50 -f $4 >> $5
+mpirun -np 2 $7 -a 100 -f $4 >> $5
+mpirun -np 2 $7 -a 200 -f $4 >> $5
+
