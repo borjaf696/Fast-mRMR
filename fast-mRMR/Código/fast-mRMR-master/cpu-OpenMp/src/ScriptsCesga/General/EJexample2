@@ -1,1 +1,0 @@
-sbatch Jorge1Proc ../../ParallelMPI/ ../ScriptsCesga/General/ /mnt/lustre/scratch/home/ulc/es/bfc/Discretizador/Mrmr/breast_preprocessed2.mrmr ../../../Output-Cesga/BreastCancer/MPI/Jorge1Proc2 /mnt/lustre/scratch/home/ulc/es/bfc/Discretizador/Mrmr/epsilon_normalized.mrmr ../../../Output-Cesga/EpsylonDataset/MPI/Jorge1Proc2 Makefile3

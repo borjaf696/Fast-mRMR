@@ -1,1 +1,0 @@
-1nodo ../../ParallelMPI/ ../ScriptsCesga/General/ /mnt/lustre/scratch/home/ulc/es/bfc/Discretizador/Mrmr/breast_preprocessed2.mrmr ../../../Output-Cesga/BreastCancer/MPI/Resultados1NodoBreast /mnt/lustre/scratch/home/ulc/es/bfc/Discretizador/Mrmr/epsilon_normalized.mrmr ../../../Output-Cesga/EpsylonDataset/MPI/Resultados1NodoEpsilon pol ./../../ParallelMPI/fast-mrmr
