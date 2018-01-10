@@ -5,13 +5,17 @@ This is an improved implementation of the classical feature selection method: mi
 
 ## Main features
 
-Several optimizations have been introduced in this improved version in order to speed up the costliest computation of the original algorithm: Mutual Information (MI) calculations. These optimizations are described in the followings: 
+Several optimizations have been introduced in mRMR improved version, fast-mRMR, in order to speed up the costliest computation of the original algorithm: Mutual Information (MI) calculations. These optimizations are described in the followings: 
 
 - **Cache marginal probabilities**: Instead of obtaining the marginal probabilities in each MI computation, those are calculated only once at the beginning of the program, and cached to be re-used in the next iterations.
 
 - **Accumulating redundancy**: The most important optimization is the greedy nature of the algorithm. Instead of computing the mutual information between every pair of features, now redundancy is accumulated in each iteration and the computations are performed between the last selected feature in S and each feature in non-selected set of attributes. 
 
 - **Data access pattern**: The access pattern of mRMR to the dataset is thought to be feature-wise, in contrast to many other ML (machine learning) algorithms, in which access pattern is row-wise. Although being a low-level technical nuance, this aspect can significantly degrade mRMR performance since random access has a much greater cost than block-wise access. This is specially important in the case of GPU, since data has to be transferred from CPU memory to GPU global memory. Here, we reorganize the way in which data is stored in memory, changing it to a columnar format.
+
+Fast-mRMR MPI version includes MPI and OpenMP novel parallelizations:
+- **OpenMP**: fast-mRMR with OpenMP parallelizations allows people with no GPU or CPU clusters improve his features selection times, with a shared memory parallelization version. Bringing closer feature selection for everyone. 
+- **MPI**: fast-mRMR with MPI parallelization allows fast-mRMR being applied over big data datasets. Offering same results but with high improved times.
 
 ## Implementations
 
@@ -39,9 +43,9 @@ The code is organized as follows:
    * export OMP_NUM_THREADS=X
    * ./fast-mrmr -a NumFeatures -f File.mrmr -c ClassNumber
 2. ***MPI***:
-   * cd Fast-mRMR/fast-mRMR/Código/fast-mRMR-master/cpu-OpenMp/src/Parallel/
-   * make clean -f Makefile3
-   * make -f Makefile3
+   * cd Fast-mRMR/fast-mRMR/Código/fast-mRMR-master/cpu-MPI/src/ParallelMPI/
+   * make clean 
+   * make
    * mpirun -np NumProcs -X OMP_NUM_THREADS=X ./fast-mrmr -a NumFeatures -f File.mrmr -c ClassNumber
    
 ## mRMR Format:
@@ -61,11 +65,3 @@ Data-reader only works properly with datasets which have been previously discret
   * cd Fast-mRMR/fast-mRMR/Código/fast-mRMR-master/utils/Equal-Width/
   * python Equal.py FileInput FileOutput NumberOfValues NumberOfFeatures Class
   * Char based features will not be discretized because it is supossed to be already bounded to at most 256 different characters.
-
-## License
-
-Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to You under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.  You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
