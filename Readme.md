@@ -1,4 +1,4 @@
-Welcome to the fast-mRMR-MPI wiki!
+Welcome to the fast-mRMR MPI wiki!
 
 This is an improved implementation of the classical feature selection method: minimum Redundancy and Maximum Relevance (mRMR); presented by Peng in [1]. 
 
@@ -10,12 +10,12 @@ Several optimizations have been introduced in this improved version in order to 
 
 - **Accumulating redundancy**: The most important optimization is the greedy nature of the algorithm. Instead of computing the mutual information between every pair of features, now redundancy is accumulated in each iteration and the computations are performed between the last selected feature in S and each feature in non-selected set of attributes. 
 
-- **Data access pattern**: The access pattern of mRMR to the dataset is thought to be feature-wise, in contrast to many other ML (machine learning) algorithms, in which access pattern is row-wise. Although being a low-level technical nuance, this aspect can significantly degrade mRMR performance since random access has a much greater cost than block-wise access.
+- **Data access pattern**: The access pattern of mRMR to the dataset is thought to be feature-wise, in contrast to many other ML (machine learning) algorithms, in which access pattern is row-wise. Although being a low-level technical nuance, this aspect can significantly degrade mRMR performance since random access has a much greater cost than block-wise access. This is specially important in the case of GPU, since data has to be transferred from CPU memory to GPU global memory. Here, we reorganize the way in which data is stored in memory, changing it to a columnar format.
 
-Fast-mRMR-MPI version:
-- **Sequential**: original fast-mRMR code for develop features selection.
-- **OpenMP**: OpenMP approach allows fast-mRMR to be applied by people or research groups with low resources which leads an acceleration of the original fast-mRMR code scaling with the number of cores.
-- **MPI**: MPI approach allows fast-mRMR to be applied over big data datasets in cluster systems.
+Fast-mRMR MPI version:
+
+- **MPI**: MPI approach allows fast-mRMR to be applied over big data datasets in multi-cluster systems.
+- **OpenMP**: OpenMP approach allows fast-mRMR to be applied by people or research groups with low resources and obtaining high performance.
 
 ## Implementations
 
@@ -31,34 +31,28 @@ Here, we include several implementations for different platforms, in order to ea
 The code is organized as follows:
 
 * _cpu_: C++ code for CPU .
-* _cpu-OpenMP: C++ code for shared memory systems.
-* _cpu-MPI: C++ code for cluster systems.
-* _utils_: this folder contains a data reader program that transforms data in CSV format to the format required by fast-mRMR-MPI algorithm (in binary and columnar-wise format). It also includes a data generator method in case we want to generate synthetic data specifying the structure of this data.
+* _utils_: this folder contains a data reader program that transforms data in CSV format to the format required by fast-mRMR algorithm (in binary and columnar-wise format). It also includes a data generator method in case we want to generate synthetic data specifying the structure of this data.
 * _examples_: a folder with examples for all versions implemented.   
 
 ## Compile:
-1. ***Sequential***
-   * cd Fast-mRMR/fast-mRMR/cpu/Code/src/
-   * make clean
-   * make
-   * ./fast-mrmr -a NumFeatures -f File.mrmr -c ClassNumber
-2. ***OpenMP***: 
-   * cd Fast-mRMR/fast-mRMR/cpu-OpenMp/Code/src/
+
+1. ***OpenMP***: 
+   * cd Fast-mRMR/fast-mRMR/Código/fast-mRMR-master/cpu-OpenMp/src/Parallel/
    * make clean
    * make
    * export OMP_NUM_THREADS=X
    * ./fast-mrmr -a NumFeatures -f File.mrmr -c ClassNumber
-3. ***MPI***  
-   * cd Fast-mRMR/fast-mRMR/cpu-OpenMp/Code/src/
-   * make clean
-   * make
+2. ***MPI***  
+   * cd Fast-mRMR/fast-mRMR/Código/fast-mRMR-master/cpu-OpenMp/src/Parallel/
+   * make clean -f Makefile3
+   * make -f Makefile3
    * mpirun -np NumProcs -X OMP_NUM_THREADS=X ./fast-mrmr -a NumFeatures -f File.mrmr -c ClassNumber
    
 ## mRMR Format:
 
 In order to translate to binary format CSV regular file (comma separed) a conversion tool is offered:
 1. ***Data-Reader***: 
-  * cd Fast-mRMR/fast-mRMR/utils/data-reader/
+  * cd Fast-mRMR/fast-mRMR/Código/fast-mRMR-master/utils/data-reader/
   * make clean
   * make
   * ./mrmr-reader InputFile.csv OutputFile.mrmr
